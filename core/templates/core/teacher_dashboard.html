@@ -1,0 +1,179 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">学生机状态</h5>
+            </div>
+            <div class="card-body">
+                <div class="machine-grid">
+                    {% if machine_status %}
+                        {% for ip, info in machine_status.items %}
+                            <div class="machine-item online">
+                                <div class="student-name">{{ info.student_name }}</div>
+                                <div class="login-time">登录时间: {{ info.last_login|date:"H:i:s" }}</div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="text-center">当前没有学生在线</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">作业分发</h5>
+            </div>
+            <div class="card-body">
+                <form id="assignmentForm" method="post" enctype="multipart/form-data" action="{% url 'distribute_assignments' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="assignments" class="form-label">选择作业文件</label>
+                        <input type="file" class="form-control" id="assignments" name="assignments" multiple required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">分发作业</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">批改任务管理</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>学生</th>
+                                <th>作业名称</th>
+                                <th>分配时间</th>
+                                <th>下载状态</th>
+                                <th>成绩</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for assignment in assignments %}
+                            <tr>
+                                <td>{{ assignment.assigned_to.first_name }} ({{ assignment.assigned_to.student_id }})</td>
+                                <td>{{ assignment.file_name }}</td>
+                                <td>{{ assignment.upload_time|date:"Y-m-d H:i" }}</td>
+                                <td>{{ assignment.download_status|yesno:"已下载,未下载" }}</td>
+                                <td>{{ assignment.get_grade_display|default:"-" }}</td>
+                                <td>
+                                    <button type="button" 
+                                            class="btn btn-sm btn-danger delete-assignment"
+                                            data-assignment-id="{{ assignment.id }}">
+                                        <i class="fas fa-trash-alt"></i> 删除
+                                    </button>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="6" class="text-center">暂无批改任务</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">快捷操作</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="{% url 'download_template' %}" class="btn btn-outline-info">
+                        <i class="fas fa-download"></i> 下载导入模板
+                    </a>
+                    <a href="{% url 'import_students' %}" class="btn btn-outline-primary">
+                        <i class="fas fa-upload"></i> 导入学生信息
+                    </a>
+                    <a href="{% url 'export_grades' %}" class="btn btn-outline-success">
+                        <i class="fas fa-file-export"></i> 导出成绩
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% load static %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // 作业分发表单提交
+    $('#assignmentForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        var formData = new FormData(this);
+        
+        $.ajax({
+            url: $(this).attr('action'),
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert('作业分发成功！');
+                    location.reload();
+                } else {
+                    alert('作业分发失败：' + response.message);
+                }
+            },
+            error: function() {
+                alert('系统错误，请稍后重试');
+            }
+        });
+    });
+
+    function updateStudentStatus() {
+        $.ajax({
+            url: '/machine-status/',
+            method: 'GET',
+            success: function(data) {
+                $('.machine-grid').empty();
+                
+                if (Object.keys(data).length === 0) {
+                    $('.machine-grid').html('<div class="text-center">当前没有学生在线</div>');
+                    return;
+                }
+                
+                // 遍历并显示在线学生
+                Object.entries(data).forEach(([ip, info]) => {
+                    if (info.online) {
+                        const studentBox = `
+                            <div class="machine-item online">
+                                <div class="student-name">${info.student_name}</div>
+                                <div class="login-time">登录时间: ${info.last_login}</div>
+                            </div>
+                        `;
+                        $('.machine-grid').append(studentBox);
+                    }
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error('获取学生状态失败:', error);
+            }
+        });
+    }
+
+    // 页面加载时立即更新一次
+    updateStudentStatus();
+    
+    // 每5秒自动更新一次
+    setInterval(updateStudentStatus, 5000);
+});
+</script>
+{% endblock %} 

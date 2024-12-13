@@ -1,0 +1,11 @@
+# 1. 删除数据库
+del db.sqlite3
+
+# 2. 执行迁移
+python manage.py migrate
+
+# 3. 创建测试账号
+python manage.py create_test_accounts
+
+# 4. 启动服务器
+python manage.py runserver

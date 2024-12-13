@@ -1,0 +1,72 @@
+.online-students-panel {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-list {
+    margin-top: 10px;
+}
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+.student-name {
+    font-weight: bold;
+}
+
+.login-time {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.student-machines {
+    margin: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.machine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.machine-item {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.machine-item .ip-address {
+    font-weight: bold;
+    color: #2196F3;
+    margin-bottom: 5px;
+}
+
+.machine-item .student-info {
+    font-size: 0.9em;
+}
+
+.machine-item .student-name {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.machine-item .login-time {
+    color: #666;
+    font-size: 0.85em;
+} 

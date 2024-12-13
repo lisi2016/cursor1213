@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">我的作业</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>作业名称</th>
+                        <th>分配时间</th>
+                        <th>下载状态</th>
+                        <th>成绩</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for assignment in assignments %}
+                    <tr>
+                        <td>{{ assignment.file_name }}</td>
+                        <td>{{ assignment.upload_time|date:"Y-m-d H:i" }}</td>
+                        <td>{{ assignment.download_status|yesno:"已下载,未下载" }}</td>
+                        <td>{{ assignment.get_grade_display|default:"-" }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="{% url 'download_assignment' assignment.id %}" 
+                                   class="btn btn-sm btn-primary">下载</a>
+                                {% if not assignment.grade %}
+                                <button type="button" 
+                                        class="btn btn-sm btn-success grade-btn"
+                                        data-assignment-id="{{ assignment.id }}">
+                                    评分
+                                </button>
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="text-center">暂无作业</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% load static %}
+<script src="{% static 'core/js/student.js' %}"></script>
+{% endblock %} 

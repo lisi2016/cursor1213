@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">导入学生信息</h5>
+    </div>
+    <div class="card-body">
+        <div class="alert alert-info">
+            <h6>导入说明：</h6>
+            <ol>
+                <li>请先下载<a href="{% url 'download_template' %}" class="alert-link">导入模板</a></li>
+                <li>按模板格式填写学生信息</li>
+                <li>学号将作为学生的登录账号和初始密码</li>
+                <li>支持的文件格式：.xlsx</li>
+            </ol>
+        </div>
+        
+        {% if messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endif %}
+        
+        <form method="post" enctype="multipart/form-data" action="{% url 'import_students' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="student_file" class="form-label">选择Excel文件</label>
+                <input type="file" class="form-control" id="student_file" name="student_file" 
+                       accept=".xlsx" required>
+            </div>
+            <button type="submit" class="btn btn-primary">导入</button>
+            <a href="{% url 'teacher_dashboard' %}" class="btn btn-secondary">返回</a>
+        </form>
+    </div>
+</div>
+{% endblock %} 
