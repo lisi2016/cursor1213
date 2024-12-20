@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
-from django.http import JsonResponse, HttpResponse, FileResponse
+from django.http import JsonResponse, HttpResponse, FileResponse, StreamingHttpResponse
 from django.core.exceptions import PermissionDenied
 import pandas as pd
 from datetime import datetime
@@ -15,6 +15,12 @@ from openpyxl.styles import Font, PatternFill
 from django.contrib import messages
 import os
 import urllib.parse
+from django.core.files.base import ContentFile
+from django.conf import settings
+import shutil
+from channels.layers import get_channel_layer
+from asgiref.sync import async_to_sync
+import json
 
 @require_http_methods(["GET", "POST"])
 def login_view(request):
@@ -27,18 +33,29 @@ def login_view(request):
             login(request, user)
             
             if not user.is_teacher:
-                # 获取客户端真实IP地址
                 x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-                if x_forwarded_for:
-                    ip = x_forwarded_for.split(',')[0].strip()
-                else:
-                    ip = request.META.get('REMOTE_ADDR')
+                ip = x_forwarded_for.split(',')[0].strip() if x_forwarded_for else request.META.get('REMOTE_ADDR')
                 
-                # 更新用户IP和登录时间
                 user.ip_address = ip
                 user.last_login = timezone.now()
                 user.save(update_fields=['ip_address', 'last_login'])
-                print(f"Student logged in - Username: {username}, IP: {ip}")  # 添加调试日志
+                
+                print(f"Student logged in - Sending WebSocket notification")
+                channel_layer = get_channel_layer()
+                async_to_sync(channel_layer.group_send)(
+                    "teacher_group",
+                    {
+                        "type": "student_status",
+                        "data": {
+                            "action": "login",
+                            "student_id": user.student_id,
+                            "name": user.first_name,
+                            "ip": ip,
+                            "last_login": user.last_login.strftime('%Y-%m-%d %H:%M:%S')
+                        }
+                    }
+                )
+                print(f"WebSocket notification sent")
             
             return redirect('teacher_dashboard' if user.is_teacher else 'student_dashboard')
             
@@ -49,25 +66,25 @@ def teacher_dashboard(request):
     if not request.user.is_teacher:
         raise PermissionDenied
         
-    # 只获取已登录的学生
+    # 获取所有作业任务
+    assignments = Assignment.objects.all().select_related('assigned_to').order_by('-upload_time')
+    
+    # 获取所有班级列表（用于导出成绩的班级筛选）
+    class_list = User.objects.filter(
+        is_teacher=False
+    ).values_list('class_name', flat=True).distinct().order_by('class_name')
+    
+    # 获取在线学生
     students = User.objects.filter(
         is_teacher=False,
         last_login__isnull=False,
-        # 只获取最近5分钟内登录的学生
         last_login__gte=timezone.now() - timezone.timedelta(minutes=5)
     )
     
-    machine_status = {}
-    for student in students:
-        if student.ip_address:  # 只有登录的学生才会有IP地址
-            machine_status[student.ip_address] = {
-                'online': True,
-                'student_name': student.first_name,
-                'last_login': student.last_login
-            }
-            
     context = {
-        'machine_status': machine_status,
+        'assignments': assignments,
+        'class_list': class_list,  # 添加班级列表到上下文
+        'students': students,
     }
     return render(request, 'core/teacher_dashboard.html', context)
 
@@ -104,7 +121,7 @@ def import_students(request):
             for index, row in df.iterrows():
                 try:
                     # 验证学号格式
-                    if not str(row['学号']).isdigit():
+                    if not str(row['学���']).isdigit():
                         error_messages.append(f"第{index+2}行：学号必须为数字")
                         continue
                         
@@ -166,29 +183,20 @@ def distribute_assignments(request):
             return JsonResponse({'status': 'error', 'message': '当前没有在线学生'})
             
         try:
-            # 按IP地址前缀对文件进行分组
-            file_groups = {}
-            for file in files:
-                # 假设文件名格式为: "192.168.1.100_作业1.doc"
-                ip_prefix = file.name.split('_')[0]  # 获取IP地址前缀
-                if ip_prefix not in file_groups:
-                    file_groups[ip_prefix] = []
-                file_groups[ip_prefix].append(file)
-            
             assignments_created = 0
+            student_index = 0  # 用于轮询分配
+            total_students = len(online_students)
             
-            # 为每组作业分配学生
-            for ip_prefix, group_files in file_groups.items():
-                # 如果学生数量少于作业数，每个学生至少分配一份作业
-                students_for_group = online_students[:len(group_files)]
-                if not students_for_group:
-                    continue
+            # 直接遍历所有文件，轮询分配给在线学生
+            for file in files:
+                if total_students > 0:  # 确保有在线学生
+                    # 获取当前学生
+                    student = online_students[student_index]
                     
-                # 分配作业给学生
-                for file in group_files:
-                    # 如果还有未分配的学生，就分配给下一个学生
-                    if students_for_group:
-                        student = students_for_group.pop(0)
+                    try:
+                        # 生成唯一的文件名
+                        timestamp = timezone.now().strftime('%Y%m%d_%H%M%S')
+                        file_name = f"{timestamp}_{file.name}"
                         
                         # 创建作业记录
                         assignment = Assignment(
@@ -196,10 +204,16 @@ def distribute_assignments(request):
                             assigned_to=student,
                             upload_time=timezone.now()
                         )
+                        
+                        # 使用 Django 的 FileField 保存文件
+                        assignment.file_path.save(file_name, file, save=False)
                         assignment.save()
                         
-                        # 保存文件
-                        assignment.file_path.save(file.name, file, save=True)
+                        print(f"Assignment created successfully:")
+                        print(f"- ID: {assignment.id}")
+                        print(f"- File name: {assignment.file_name}")
+                        print(f"- File path: {assignment.file_path.path}")
+                        print(f"- Assigned to: {student.username}")
                         
                         # 创建分发日志
                         DistributionLog.objects.create(
@@ -210,11 +224,24 @@ def distribute_assignments(request):
                         )
                         
                         assignments_created += 1
+                        
+                        # 更新学生索引，实现轮询
+                        student_index = (student_index + 1) % total_students
+                        
+                    except Exception as e:
+                        print(f"Error creating assignment: {str(e)}")
+                        continue
             
-            return JsonResponse({
-                'status': 'success',
-                'message': f'成功分发{assignments_created}个作业任务'
-            })
+            if assignments_created > 0:
+                return JsonResponse({
+                    'status': 'success',
+                    'message': f'成功分发{assignments_created}个作业任务给{total_students}个在线学生'
+                })
+            else:
+                return JsonResponse({
+                    'status': 'error',
+                    'message': '没有成功分发任何作业'
+                })
             
         except Exception as e:
             print(f"作业分发错误: {str(e)}")
@@ -230,81 +257,185 @@ def download_assignment(request, assignment_id):
     try:
         assignment = Assignment.objects.get(id=assignment_id, assigned_to=request.user)
         
+        print(f"开始处理下载请求:")
+        print(f"- MEDIA_ROOT: {settings.MEDIA_ROOT}")
+        print(f"- 文件相对路径: {assignment.file_path}")
+        print(f"- 文件名: {assignment.file_name}")
+        
         if not assignment.file_path:
+            print("错误: 文件路径为空")
             return HttpResponse('文件不存在', status=404)
             
         try:
-            file_path = assignment.file_path.path
+            file_path = os.path.join(settings.MEDIA_ROOT, str(assignment.file_path))
+            print(f"- 完整文件路径: {file_path}")
+            
             if not os.path.exists(file_path):
+                print(f"错误: 文件不存在于路径: {file_path}")
                 return HttpResponse('文件不存在', status=404)
                 
-            # 使用 FileResponse 替代 HttpResponse
-            response = FileResponse(
-                open(file_path, 'rb'),
+            # 使用 StreamingHttpResponse 替代 FileResponse
+            def file_iterator(file_path, chunk_size=8192):
+                with open(file_path, 'rb') as f:
+                    while True:
+                        chunk = f.read(chunk_size)
+                        if not chunk:
+                            break
+                        yield chunk
+
+            response = StreamingHttpResponse(
+                file_iterator(file_path),
                 content_type='application/octet-stream'
             )
-            response['Content-Disposition'] = f'attachment; filename="{urllib.parse.quote(assignment.file_name)}"'
+            
+            # 设置文件名，支持中文
+            encoded_filename = urllib.parse.quote(assignment.file_name)
+            response['Content-Disposition'] = f'attachment; filename*=UTF-8\'\'{encoded_filename}'
             
             # 更新下载状态
             assignment.download_status = True
             assignment.download_time = timezone.now()
-            assignment.save()
+            assignment.save(update_fields=['download_status', 'download_time'])
             
+            print(f"文件下载成功: {assignment.file_name}")
             return response
-            
+                
         except Exception as e:
-            print(f"文件下载错误: {str(e)}")
-            return HttpResponse('文件下载失败', status=500)
+            print(f"文件读取错误: {str(e)}")
+            return HttpResponse('文件读取失败', status=500)
             
     except Assignment.DoesNotExist:
-        raise PermissionDenied
+        print(f"作业不存在: {assignment_id}")
+        return HttpResponse('作业不存在', status=404)
+    except Exception as e:
+        print(f"下载过程中发生错误: {str(e)}")
+        return HttpResponse('下载失败', status=500)
 
 @login_required
 def grade_assignment(request, assignment_id):
     if request.method == 'POST':
         grade = request.POST.get('grade')
+        
+        # 验证成绩格式
+        if not grade or grade not in ['A', 'B', 'C', 'D']:
+            return JsonResponse({
+                'status': 'error',
+                'message': '无效的成绩等级'
+            })
+            
         try:
             assignment = Assignment.objects.get(id=assignment_id, assigned_to=request.user)
-            assignment.grade = grade
-            assignment.save()
-            return JsonResponse({'status': 'success'})
-        except Assignment.DoesNotExist:
-            return JsonResponse({'status': 'error', 'message': '作业不存在'})
             
-    return JsonResponse({'status': 'error', 'message': '方法不允许'})
+            # 检查是否已经评分
+            if assignment.grade:
+                return JsonResponse({
+                    'status': 'error',
+                    'message': '该作业已经评过分'
+                })
+                
+            # 更新成绩
+            assignment.grade = grade
+            assignment.save(update_fields=['grade'])
+            
+            return JsonResponse({
+                'status': 'success',
+                'grade_display': assignment.get_grade_display()
+            })
+            
+        except Assignment.DoesNotExist:
+            return JsonResponse({
+                'status': 'error',
+                'message': '作业不存在'
+            })
+        except Exception as e:
+            return JsonResponse({
+                'status': 'error',
+                'message': f'评分失败：{str(e)}'
+            })
+            
+    return JsonResponse({
+        'status': 'error',
+        'message': '方法不允许'
+    })
 
 @login_required
 def export_grades(request):
     if not request.user.is_teacher:
         raise PermissionDenied
         
-    class_name = request.GET.get('class_name')
-    assignments = Assignment.objects.filter(
-        assigned_to__class_name=class_name if class_name else None
-    ).select_related('assigned_to')
-    
-    data = []
-    for assignment in assignments:
-        data.append({
-            '学号': assignment.assigned_to.student_id,
-            '姓名': assignment.assigned_to.first_name,
-            '班级': assignment.assigned_to.class_name,
-            '作业': assignment.file_name,
-            '成绩': assignment.grade,
-            '下载时间': assignment.download_time
-        })
-    
-    df = pd.DataFrame(data)
-    response = HttpResponse(content_type='application/vnd.ms-excel')
-    response['Content-Disposition'] = 'attachment; filename="grades.xlsx"'
-    df.to_excel(response, index=False)
-    return response 
+    try:
+        # 获取选择的班级
+        class_name = request.GET.get('class_name')
+        
+        # 构建查询条件
+        query = {}
+        if class_name:
+            query['assigned_to__class_name'] = class_name
+            
+        # 获取作业数据
+        assignments = Assignment.objects.filter(
+            **query
+        ).select_related('assigned_to').order_by(
+            'assigned_to__class_name',
+            'assigned_to__student_id',
+            '-upload_time'
+        )
+        
+        # 创建工作簿
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "成绩统计"
+        
+        # 设置表头
+        headers = ['学号', '姓名', '班级', '作业名称', '成绩', '下载状态', '下载时间', '分配时间']
+        for col, header in enumerate(headers, 1):
+            cell = ws.cell(row=1, column=col)
+            cell.value = header
+            cell.font = Font(bold=True)
+            cell.fill = PatternFill(start_color="CCCCCC", end_color="CCCCCC", fill_type="solid")
+        
+        # 写入数据
+        for row, assignment in enumerate(assignments, 2):
+            student = assignment.assigned_to
+            ws.cell(row=row, column=1).value = student.student_id
+            ws.cell(row=row, column=2).value = student.first_name
+            ws.cell(row=row, column=3).value = student.class_name
+            ws.cell(row=row, column=4).value = assignment.file_name
+            ws.cell(row=row, column=5).value = assignment.get_grade_display() if assignment.grade else '未评分'
+            ws.cell(row=row, column=6).value = '已下载' if assignment.download_status else '未下载'
+            ws.cell(row=row, column=7).value = timezone.localtime(assignment.download_time).strftime('%Y-%m-%d %H:%M:%S') if assignment.download_time else '-'
+            ws.cell(row=row, column=8).value = timezone.localtime(assignment.upload_time).strftime('%Y-%m-%d %H:%M:%S')
+        
+        # 设置列宽
+        column_widths = [15, 15, 15, 40, 10, 10, 20, 20]
+        for i, width in enumerate(column_widths, 1):
+            ws.column_dimensions[chr(64 + i)].width = width
+        
+        # 创建响应
+        response = HttpResponse(
+            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        )
+        
+        # 设置文件名（包含班级信息和时间戳）
+        timestamp = timezone.now().strftime('%Y%m%d_%H%M%S')
+        filename = f"成绩统计_{class_name or '全部'}_{timestamp}.xlsx"
+        response['Content-Disposition'] = f'attachment; filename*=UTF-8\'\'{urllib.parse.quote(filename)}'
+        
+        # 保存到响应
+        wb.save(response)
+        return response
+        
+    except Exception as e:
+        print(f"导出成绩时发生错误: {str(e)}")
+        messages.error(request, f'导出失败：{str(e)}')
+        return redirect('teacher_dashboard')
 
 # 添加一个新的视图来更新机器状态
 @login_required
 def update_machine_status(request):
+    # 如果是学生访问，返回空数据而不是抛出权限错误
     if not request.user.is_teacher:
-        raise PermissionDenied
+        return JsonResponse({})
         
     # 获取最近5分钟内登录的所有学生
     five_minutes_ago = timezone.now() - timezone.timedelta(minutes=5)
@@ -325,14 +456,27 @@ def update_machine_status(request):
     
     return JsonResponse(machine_status)
 
+@login_required
 def logout_view(request):
-    if request.user.is_authenticated and not request.user.is_teacher:
-        # 清除学生的IP地址
+    if not request.user.is_teacher:
+        # 通知教师端
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            "teacher_group",
+            {
+                "type": "student_status",
+                "data": {
+                    "action": "logout",
+                    "student_id": request.user.student_id
+                }
+            }
+        )
+        
         request.user.ip_address = None
         request.user.save(update_fields=['ip_address'])
     
     logout(request)
-    return redirect('login') 
+    return redirect('login')
 
 def download_import_template(request):
     if not request.user.is_teacher:
@@ -363,7 +507,7 @@ def download_import_template(request):
     
     # 设置宽度
     ws.column_dimensions['A'].width = 15  # 学号列
-    ws.column_dimensions['B'].width = 15  # ��名列
+    ws.column_dimensions['B'].width = 15  # 姓名列
     ws.column_dimensions['C'].width = 20  # 班级列
     
     # 创建HTTP响应
@@ -375,3 +519,86 @@ def download_import_template(request):
     # 保存工作簿到响应
     wb.save(response)
     return response 
+
+@login_required
+def delete_assignment(request, assignment_id):
+    if not request.user.is_teacher:
+        raise PermissionDenied
+        
+    if request.method == 'POST':
+        try:
+            assignment = Assignment.objects.get(id=assignment_id)
+            
+            # 如果文件存在，删除文件
+            if assignment.file_path:
+                try:
+                    assignment.file_path.delete(save=False)
+                except Exception as e:
+                    print(f"删除文件错误: {str(e)}")
+            
+            # 删除作业记录
+            assignment.delete()
+            
+            return JsonResponse({'status': 'success'})
+            
+        except Assignment.DoesNotExist:
+            return JsonResponse({
+                'status': 'error',
+                'message': '作业不存在'
+            })
+        except Exception as e:
+            return JsonResponse({
+                'status': 'error',
+                'message': str(e)
+            })
+            
+    return JsonResponse({
+        'status': 'error',
+        'message': '方法不允许'
+    })
+
+@login_required
+@require_http_methods(["POST"])
+def delete_assignments(request):
+    if not request.user.is_teacher:
+        raise PermissionDenied
+        
+    try:
+        data = json.loads(request.body)
+        assignment_ids = data.get('assignment_ids', [])
+        
+        if not assignment_ids:
+            return JsonResponse({
+                'status': 'error',
+                'message': '未选择要删除的作业'
+            })
+            
+        assignments = Assignment.objects.filter(id__in=assignment_ids)
+        deleted_count = 0
+        
+        for assignment in assignments:
+            try:
+                # 删除文件
+                if assignment.file_path:
+                    assignment.file_path.delete(save=False)
+                # 删除记录
+                assignment.delete()
+                deleted_count += 1
+            except Exception as e:
+                print(f"删除作业 {assignment.id} 时出错: {str(e)}")
+        
+        return JsonResponse({
+            'status': 'success',
+            'message': f'成功删除 {deleted_count} 个作业任务'
+        })
+        
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'status': 'error',
+            'message': '��效的请求数据'
+        })
+    except Exception as e:
+        return JsonResponse({
+            'status': 'error',
+            'message': str(e)
+        })

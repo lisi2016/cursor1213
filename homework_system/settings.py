@@ -13,12 +13,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'core.apps.CoreConfig',
 ]
 
@@ -99,3 +101,13 @@ AUTH_USER_MODEL = 'core.User'
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/teacher/'
 LOGOUT_REDIRECT_URL = '/'
+
+# Channels configuration
+ASGI_APPLICATION = 'homework_system.asgi.application'
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
+
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']

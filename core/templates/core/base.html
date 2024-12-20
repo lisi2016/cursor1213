@@ -21,7 +21,7 @@
                     <small class="text-muted">({{ user.student_id }})</small>
                 </span>
                 {% endif %}
-                <a class="nav-link" href="{% url 'logout' %}">
+                <a class="nav-link" href="{% url 'logout' %}" onclick="return confirm('确定要退出吗？');">
                     <i class="fas fa-sign-out-alt me-1"></i>退出
                 </a>
             </div>

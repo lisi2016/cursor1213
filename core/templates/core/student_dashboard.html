@@ -6,6 +6,7 @@
         <h5 class="mb-0">我的作业</h5>
     </div>
     <div class="card-body">
+        {% csrf_token %}
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -27,7 +28,8 @@
                         <td>
                             <div class="btn-group">
                                 <a href="{% url 'download_assignment' assignment.id %}" 
-                                   class="btn btn-sm btn-primary">下载</a>
+                                   class="btn btn-sm btn-primary download-btn"
+                                   data-assignment-id="{{ assignment.id }}">下载</a>
                                 {% if not assignment.grade %}
                                 <button type="button" 
                                         class="btn btn-sm btn-success grade-btn"
@@ -52,5 +54,6 @@
 
 {% block extra_js %}
 {% load static %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{% static 'core/js/student.js' %}"></script>
 {% endblock %} 
