@@ -19,4 +19,5 @@ urlpatterns = [
     path('download-template/', views.download_import_template, name='download_template'),
     path('delete-assignment/<int:assignment_id>/', views.delete_assignment, name='delete_assignment'),
     path('delete-assignments/', views.delete_assignments, name='delete_assignments'),
+    path('student/assignments/', views.get_student_assignments, name='student_assignments'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

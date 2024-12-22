@@ -1,29 +1,19 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block content %}
-{% csrf_token %}
 <div class="row">
     <div class="col-md-8">
         <div class="card mb-4">
-            <div class="card-header">
-                <h5 class="mb-0">学生机状态</h5>
-            </div>
-            <div class="card-body">
-                <div id="ws-status" class="alert alert-info mb-3" style="display:none;">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">在线学生</h5>
+                <div id="ws-status" class="alert alert-info mb-0 py-1">
                     WebSocket 状态: <span id="ws-status-text">正在连接...</span>
                 </div>
+            </div>
+            <div class="card-body">
                 <div class="machine-grid">
-                    {% if machine_status %}
-                        {% for ip, info in machine_status.items %}
-                            <div class="machine-item online" data-student-id="{{ info.student_id }}">
-                                <div class="student-name">{{ info.student_name }}</div>
-                                <div class="ip-address">IP: {{ ip }}</div>
-                                <div class="login-time">登录时间: {{ info.last_login|date:"H:i:s" }}</div>
-                            </div>
-                        {% endfor %}
-                    {% else %}
-                        <div class="text-center">当前没有学生在线</div>
-                    {% endif %}
+                    <div class="text-center">当前没有学生在线</div>
                 </div>
             </div>
         </div>
@@ -33,13 +23,15 @@
                 <h5 class="mb-0">作业分发</h5>
             </div>
             <div class="card-body">
-                <form id="assignmentForm" method="post" enctype="multipart/form-data" action="{% url 'distribute_assignments' %}">
+                <form id="assignmentForm" action="{% url 'distribute_assignments' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="mb-3">
                         <label for="assignments" class="form-label">选择作业文件</label>
                         <input type="file" class="form-control" id="assignments" name="assignments" multiple required>
                     </div>
-                    <button type="submit" class="btn btn-primary">分发作业</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="button-text">分发作业</span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -70,32 +62,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for assignment in assignments %}
-                            <tr>
-                                <td>
-                                    <input type="checkbox" class="form-check-input assignment-checkbox" 
-                                           data-assignment-id="{{ assignment.id }}">
-                                </td>
-                                <td>{{ assignment.assigned_to.first_name }} ({{ assignment.assigned_to.student_id }})</td>
-                                <td>{{ assignment.file_name }}</td>
-                                <td>{{ assignment.upload_time|date:"Y-m-d H:i" }}</td>
-                                <td>{{ assignment.download_status|yesno:"已下载,未下载" }}</td>
-                                <td>{{ assignment.get_grade_display|default:"-" }}</td>
-                                <td>
-                                    <button type="button" 
-                                            class="btn btn-sm btn-danger delete-assignment"
-                                            data-assignment-id="{{ assignment.id }}"
-                                            data-bs-toggle="tooltip"
-                                            title="删除此批改任务">
-                                        <i class="fas fa-trash-alt"></i> 删除
-                                    </button>
-                                </td>
-                            </tr>
-                            {% empty %}
-                            <tr>
-                                <td colspan="7" class="text-center">暂无批改任务</td>
-                            </tr>
-                            {% endfor %}
+                            {% if assignments %}
+                                {% for assignment in assignments %}
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input assignment-checkbox" 
+                                               data-assignment-id="{{ assignment.id }}">
+                                    </td>
+                                    <td>{{ assignment.assigned_to.first_name }} ({{ assignment.assigned_to.student_id }})</td>
+                                    <td>{{ assignment.file_name }}</td>
+                                    <td>{{ assignment.upload_time|date:"Y-m-d H:i" }}</td>
+                                    <td>{{ assignment.download_status|yesno:"已下载,未下载" }}</td>
+                                    <td>{{ assignment.get_grade_display|default:"-" }}</td>
+                                    <td>
+                                        <button type="button" 
+                                                class="btn btn-sm btn-danger delete-assignment"
+                                                data-assignment-id="{{ assignment.id }}"
+                                                data-bs-toggle="tooltip"
+                                                title="删除此批改任务">
+                                            <i class="fas fa-trash-alt"></i> 删除
+                                        </button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="7" class="text-center">暂无批改任务</td>
+                                </tr>
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>
@@ -151,200 +145,5 @@
 {% endblock %}
 
 {% block extra_js %}
-{% load static %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    const wsStatus = $('#ws-status');
-    const wsStatusText = $('#ws-status-text');
-    wsStatus.show();
-
-    let socket = null;
-    let reconnectAttempts = 0;
-    const maxReconnectAttempts = 5;
-    
-    function connectWebSocket() {
-        const ws_scheme = window.location.protocol === "https:" ? "wss" : "ws";
-        const ws_path = ws_scheme + '://' + window.location.host + '/ws/student_status/';
-        console.log('Connecting to WebSocket:', ws_path);
-        
-        socket = new WebSocket(ws_path);
-
-        socket.onopen = function(e) {
-            console.log('WebSocket 连接已建立');
-            wsStatusText.text('已连接');
-            wsStatus.removeClass('alert-info alert-danger').addClass('alert-success');
-            reconnectAttempts = 0; // 重置重连次数
-        };
-
-        socket.onmessage = function(e) {
-            console.log('收到消息:', e.data);
-            const data = JSON.parse(e.data);
-            
-            if (data.action === 'login') {
-                console.log('学生登录:', data);
-                updateStudentStatus(data);
-            } else if (data.action === 'logout') {
-                console.log('学生登出:', data);
-                removeStudentStatus(data.student_id);
-            }
-        };
-
-        socket.onclose = function(e) {
-            console.error('WebSocket 连接已关闭:', e);
-            wsStatusText.text('连接已断开');
-            wsStatus.removeClass('alert-info alert-success').addClass('alert-danger');
-            
-            // 尝试重连
-            if (reconnectAttempts < maxReconnectAttempts) {
-                reconnectAttempts++;
-                console.log(`尝试重连 (${reconnectAttempts}/${maxReconnectAttempts})...`);
-                wsStatusText.text(`正在重连 (${reconnectAttempts}/${maxReconnectAttempts})...`);
-                setTimeout(connectWebSocket, 3000); // 3秒后重试
-            } else {
-                wsStatusText.text('连接失败，请刷新页面重试');
-            }
-        };
-
-        socket.onerror = function(e) {
-            console.error('WebSocket 错误:', e);
-            wsStatusText.text('连接错误');
-            wsStatus.removeClass('alert-info alert-success').addClass('alert-danger');
-        };
-    }
-
-    // 初始连接
-    connectWebSocket();
-
-    // 页面关闭前关闭 WebSocket
-    window.onbeforeunload = function() {
-        if (socket) {
-            socket.close();
-        }
-    };
-
-    function updateStudentStatus(data) {
-        const studentBox = `
-            <div class="machine-item online" data-student-id="${data.student_id}">
-                <div class="student-name">${data.name}</div>
-                <div class="ip-address">IP: ${data.ip}</div>
-                <div class="login-time">登录时间: ${data.last_login}</div>
-            </div>
-        `;
-        
-        $(`.machine-item[data-student-id="${data.student_id}"]`).remove();
-        $('.machine-grid').append(studentBox);
-        
-        if ($('.machine-grid .machine-item').length === 1) {
-            $('.machine-grid .text-center').remove();
-        }
-    }
-
-    function removeStudentStatus(studentId) {
-        $(`.machine-item[data-student-id="${studentId}"]`).remove();
-        
-        if ($('.machine-grid .machine-item').length === 0) {
-            $('.machine-grid').html('<div class="text-center">当前没有学生在线</div>');
-        }
-    }
-
-    // 作业分发表单提交
-    $('#assignmentForm').on('submit', function(e) {
-        e.preventDefault();
-        
-        var formData = new FormData(this);
-        
-        $.ajax({
-            url: $(this).attr('action'),
-            type: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function(response) {
-                if (response.status === 'success') {
-                    alert('作业分发成功！');
-                    location.reload();
-                } else {
-                    alert('作业分发失败：' + response.message);
-                }
-            },
-            error: function() {
-                alert('系统错误，请稍后���试');
-            }
-        });
-    });
-
-    // 处理单个删除
-    $('.delete-assignment').on('click', function() {
-        const assignmentId = $(this).data('assignment-id');
-        deleteAssignments([assignmentId]);
-    });
-
-    // 处理全选/取消全选
-    $('#selectAll').on('change', function() {
-        const isChecked = $(this).prop('checked');
-        $('.assignment-checkbox').prop('checked', isChecked);
-        updateBatchDeleteButton();
-    });
-
-    // 处理单个复选框变化
-    $('.assignment-checkbox').on('change', function() {
-        updateBatchDeleteButton();
-        // 如果取消选中某个复选框，也要更新全选框状态
-        const allChecked = $('.assignment-checkbox:checked').length === $('.assignment-checkbox').length;
-        $('#selectAll').prop('checked', allChecked);
-    });
-
-    // 处理批量删除
-    $('#batchDeleteBtn').on('click', function() {
-        const selectedIds = $('.assignment-checkbox:checked').map(function() {
-            return $(this).data('assignment-id');
-        }).get();
-
-        if (selectedIds.length > 0) {
-            if (confirm(`确定要删除选中的 ${selectedIds.length} 个批改任务吗？此操作不可恢复。`)) {
-                deleteAssignments(selectedIds);
-            }
-        }
-    });
-
-    // 更新批量删除按钮��示状态
-    function updateBatchDeleteButton() {
-        const selectedCount = $('.assignment-checkbox:checked').length;
-        $('#batchDeleteBtn').toggle(selectedCount > 0);
-    }
-
-    // 删除作业的通用函数
-    function deleteAssignments(assignmentIds) {
-        if (!Array.isArray(assignmentIds) || assignmentIds.length === 0) return;
-
-        const isMultiple = assignmentIds.length > 1;
-        const confirmMessage = isMultiple ? 
-            `确定要删除选中的 ${assignmentIds.length} 个批改任务吗？` : 
-            '确定要删除这个批改任务吗？';
-
-        if (confirm(confirmMessage + '此操作不可恢复。')) {
-            $.ajax({
-                url: '/delete-assignments/',
-                type: 'POST',
-                data: JSON.stringify({ assignment_ids: assignmentIds }),
-                contentType: 'application/json',
-                headers: {
-                    'X-CSRFToken': $('[name=csrfmiddlewaretoken]').val()
-                },
-                success: function(response) {
-                    if (response.status === 'success') {
-                        location.reload();
-                    } else {
-                        alert('删除失败：' + response.message);
-                    }
-                },
-                error: function() {
-                    alert('系统错误，请稍后重试');
-                }
-            });
-        }
-    }
-});
-</script>
+<script src="{% static 'core/js/teacher.js' %}"></script>
 {% endblock %} 

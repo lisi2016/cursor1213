@@ -1,4 +1,4 @@
-from channels.generic.websocket import AsyncWebsocketConsumer, AsyncJsonWebsocketConsumer
+from channels.generic.websocket import AsyncJsonWebsocketConsumer
 import json
 from asgiref.sync import sync_to_async
 from django.utils import timezone
@@ -8,8 +8,8 @@ class StudentStatusConsumer(AsyncJsonWebsocketConsumer):
     async def connect(self):
         print("WebSocket connection attempt")
         if self.scope["user"].is_authenticated and self.scope["user"].is_teacher:
-            print(f"Teacher connected: {self.scope['user'].username}")
             await self.channel_layer.group_add("teacher_group", self.channel_name)
+            print(f"Teacher connected: {self.scope['user'].username}")
             await self.accept()
             
             # 发送当前在线学生列表

@@ -1,4 +1,58 @@
 $(document).ready(function() {
+    // 定义刷新间隔（毫秒）
+    const REFRESH_INTERVAL = 30000; // 30秒
+
+    // 刷新作业列表函数
+    function refreshAssignmentList() {
+        $.ajax({
+            url: '/student/assignments/',  // 新添加的API端点
+            type: 'GET',
+            success: function(response) {
+                // 更新作业列表
+                const assignmentTable = $('.table tbody');
+                if (response.assignments.length === 0) {
+                    assignmentTable.html('<tr><td colspan="5" class="text-center">暂无作业</td></tr>');
+                } else {
+                    let html = '';
+                    response.assignments.forEach(assignment => {
+                        html += `
+                            <tr>
+                                <td>${assignment.file_name}</td>
+                                <td>${assignment.upload_time}</td>
+                                <td>${assignment.download_status ? '已下载' : '未下载'}</td>
+                                <td>${assignment.grade || '-'}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="/download-assignment/${assignment.id}/" 
+                                           class="btn btn-sm btn-primary download-btn"
+                                           data-assignment-id="${assignment.id}">下载</a>
+                                        ${!assignment.grade ? `
+                                            <button type="button" 
+                                                    class="btn btn-sm btn-success grade-btn"
+                                                    data-assignment-id="${assignment.id}">
+                                                评分
+                                            </button>
+                                        ` : ''}
+                                    </div>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    assignmentTable.html(html);
+                }
+            },
+            error: function(xhr) {
+                console.error('刷新作业列表失败:', xhr);
+            }
+        });
+    }
+
+    // 设置定时刷新
+    setInterval(refreshAssignmentList, REFRESH_INTERVAL);
+
+    // 页面加载完成后立即刷新一次
+    refreshAssignmentList();
+
     // 作业评分
     $('.grade-btn').on('click', function() {
         var assignmentId = $(this).data('assignment-id');

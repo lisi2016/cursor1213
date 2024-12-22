@@ -1,0 +1,13 @@
+INFO 2024-12-22 15:31:11,366 views 12912 9140 Login attempt for user: teacher
+INFO 2024-12-22 15:31:12,333 views 12912 9140 Teacher login - clearing student sessions
+INFO 2024-12-22 15:31:12,430 views 12912 9140 Cleared 1 existing sessions for user teacher
+INFO 2024-12-22 15:31:12,631 views 12912 9140 Login successful for teacher, redirecting to dashboard
+INFO 2024-12-22 15:31:58,318 views 12912 19628 Login attempt for user: 2024015
+INFO 2024-12-22 15:31:59,444 views 12912 19628 Cleared 1 existing sessions for user 2024015
+INFO 2024-12-22 15:31:59,636 views 12912 19628 Processing student login for 2024015
+INFO 2024-12-22 15:31:59,713 views 12912 19628 Preparing WebSocket notification for student: 2024015
+INFO 2024-12-22 15:31:59,713 views 12912 19628 Channel layer type: <class 'channels.layers.InMemoryChannelLayer'>
+INFO 2024-12-22 15:31:59,714 views 12912 19628 Channel layer configuration: {'expiry': 60, 'capacity': 100, 'channel_capacity': {}, 'channels': {}, 'groups': {}, 'group_expiry': 86400}
+INFO 2024-12-22 15:31:59,714 views 12912 19628 Sending WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '°ØÇåâù', 'ip': '192.168.3.20', 'last_login': '2024-12-22 07:31:59'}}
+INFO 2024-12-22 15:31:59,717 views 12912 19628 WebSocket notification sent successfully
+INFO 2024-12-22 15:31:59,717 views 12912 19628 Login successful for 2024015, redirecting to dashboard

@@ -1,0 +1,17 @@
+[INFO] 2024-12-22 16:01:54 views Login attempt for user: teacher
+[INFO] 2024-12-22 16:01:55 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 16:01:55 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 16:01:56 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 16:02:15 views Login attempt for user: 202403
+[WARNING] 2024-12-22 16:02:16 views Login failed for username: 202403
+[INFO] 2024-12-22 16:02:24 views Login attempt for user: 202408
+[WARNING] 2024-12-22 16:02:25 views Login failed for username: 202408
+[INFO] 2024-12-22 16:02:33 views Login attempt for user: 2024008
+[INFO] 2024-12-22 16:02:34 views Cleared 1 existing sessions for user 2024008
+[INFO] 2024-12-22 16:02:34 views Processing student login for 2024008
+[DEBUG] 2024-12-22 16:02:34 views Student IP address: 192.168.3.20
+[INFO] 2024-12-22 16:02:34 views Got channel layer: <class 'channels.layers.InMemoryChannelLayer'>
+[DEBUG] 2024-12-22 16:02:34 views Available channel groups: {}
+[INFO] 2024-12-22 16:02:34 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024008', 'name': 'Ç®º®', 'ip': '192.168.3.20', 'last_login': '2024-12-22 08:02:34'}}
+[INFO] 2024-12-22 16:02:34 views WebSocket message sent successfully
+[INFO] 2024-12-22 16:02:34 views Login successful for 2024008, redirecting to dashboard
