@@ -15,3 +15,280 @@
 [INFO] 2024-12-22 16:02:34 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024008', 'name': '钱寒', 'ip': '192.168.3.20', 'last_login': '2024-12-22 08:02:34'}}
 [INFO] 2024-12-22 16:02:34 views WebSocket message sent successfully
 [INFO] 2024-12-22 16:02:34 views Login successful for 2024008, redirecting to dashboard
+[INFO] 2024-12-22 16:13:49 views Login attempt for user: teacher
+[WARNING] 2024-12-22 16:13:50 views Login failed for username: teacher
+[INFO] 2024-12-22 16:13:55 views Login attempt for user: teacher
+[WARNING] 2024-12-22 16:13:56 views Login failed for username: teacher
+[INFO] 2024-12-22 16:14:05 views Login attempt for user: teacher
+[INFO] 2024-12-22 16:14:06 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 16:14:06 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 16:14:06 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 16:15:38 views Login attempt for user: teacher
+[INFO] 2024-12-22 16:15:39 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 16:15:39 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 16:15:39 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 16:16:46 views Login attempt for user: teacher
+[INFO] 2024-12-22 16:16:47 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 16:16:47 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 16:16:48 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 16:30:41 views Login attempt for user: teacher
+[INFO] 2024-12-22 16:30:42 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 16:30:42 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 16:30:43 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 16:31:40 views Login attempt for user: 2024009
+[INFO] 2024-12-22 16:31:41 views Cleared 0 existing sessions for user 2024009
+[INFO] 2024-12-22 16:31:41 views Processing student login for 2024009
+[DEBUG] 2024-12-22 16:31:41 views Student IP address: 192.168.3.20
+[INFO] 2024-12-22 16:31:41 views Got channel layer: <class 'channels.layers.InMemoryChannelLayer'>
+[DEBUG] 2024-12-22 16:31:41 views Available channel groups: {}
+[INFO] 2024-12-22 16:31:41 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024009', 'name': '冯惜雪', 'ip': '192.168.3.20', 'last_login': '2024-12-22 08:31:41'}}
+[INFO] 2024-12-22 16:31:41 views WebSocket message sent successfully
+[INFO] 2024-12-22 16:31:41 views Login successful for 2024009, redirecting to dashboard
+[INFO] 2024-12-22 16:37:07 views Login attempt for user: teacher
+[INFO] 2024-12-22 16:37:08 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 16:37:09 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 16:37:09 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 16:37:28 views Login attempt for user: 2024007
+[INFO] 2024-12-22 16:37:29 views Cleared 1 existing sessions for user 2024007
+[INFO] 2024-12-22 16:37:29 views Processing student login for 2024007
+[DEBUG] 2024-12-22 16:37:29 views Student IP address: 192.168.3.20
+[INFO] 2024-12-22 16:37:29 views Got channel layer: <class 'channels.layers.InMemoryChannelLayer'>
+[DEBUG] 2024-12-22 16:37:29 views Available channel groups: {}
+[INFO] 2024-12-22 16:37:29 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024007', 'name': '王露', 'ip': '192.168.3.20', 'last_login': '2024-12-22 08:37:29'}}
+[INFO] 2024-12-22 16:37:29 views WebSocket message sent successfully
+[INFO] 2024-12-22 16:37:29 views Login successful for 2024007, redirecting to dashboard
+[INFO] 2024-12-22 16:40:26 views Login attempt for user: teacher
+[INFO] 2024-12-22 16:40:27 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 16:40:28 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 16:40:28 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 19:06:56 views Login attempt for user: teacher
+[INFO] 2024-12-22 19:06:57 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 19:06:57 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 19:06:57 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 19:07:27 views Login attempt for user: 2024005
+[INFO] 2024-12-22 19:07:28 views Cleared 1 existing sessions for user 2024005
+[INFO] 2024-12-22 19:07:28 views Processing student login for 2024005
+[DEBUG] 2024-12-22 19:07:28 views Student IP address: 192.168.3.20
+[INFO] 2024-12-22 19:07:28 views Got channel layer: <class 'channels.layers.InMemoryChannelLayer'>
+[DEBUG] 2024-12-22 19:07:28 views Available channel groups: {}
+[INFO] 2024-12-22 19:07:28 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-22 11:07:28'}}
+[INFO] 2024-12-22 19:07:28 views WebSocket message sent successfully
+[INFO] 2024-12-22 19:07:28 views Login successful for 2024005, redirecting to dashboard
+[INFO] 2024-12-22 19:08:08 views Login attempt for user: teacher
+[INFO] 2024-12-22 19:08:09 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 19:08:09 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 19:08:09 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 19:09:06 views Login attempt for user: teacher
+[INFO] 2024-12-22 19:09:07 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 19:09:07 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 19:09:07 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 23:31:03 views Login attempt for user: teacher
+[INFO] 2024-12-22 23:31:05 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 23:31:05 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 23:31:05 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 23:31:29 views Login attempt for user: 2024001
+[INFO] 2024-12-22 23:31:30 views Cleared 1 existing sessions for user 2024001
+[INFO] 2024-12-22 23:31:30 views Processing student login for 2024001
+[DEBUG] 2024-12-22 23:31:30 views Student IP address: 192.168.3.20
+[INFO] 2024-12-22 23:31:30 views Got channel layer: <class 'channels_redis.core.RedisChannelLayer'>
+[DEBUG] 2024-12-22 23:31:30 views Available channel groups: {}
+[INFO] 2024-12-22 23:31:30 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024001', 'name': '李同学', 'ip': '192.168.3.20', 'last_login': '2024-12-22 15:31:30'}}
+[ERROR] 2024-12-22 23:31:32 views Failed to send group message: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 281, in connect
+    await self.retry.call_with_retry(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 697, in _connect
+    reader, writer = await asyncio.open_connection(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1120, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1102, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1005, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 727, in sock_connect
+    return await self._proactor.connect(sock, address)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 798, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 594, in finish_connect
+    ov.getresult()
+ConnectionRefusedError: [WinError 1225] 远程计算机拒绝网络连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\site\批改作业13\core\views.py", line 101, in login_view
+    async_to_sync(channel_layer.group_send)(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\channels_redis\core.py", line 523, in group_send
+    await connection.zremrangebyscore(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\client.py", line 611, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1064, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1097, in ensure_connection
+    await connection.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 289, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+[INFO] 2024-12-22 23:31:32 views Login successful for 2024001, redirecting to dashboard
+[INFO] 2024-12-22 23:39:19 views Login attempt for user: teacher
+[INFO] 2024-12-22 23:39:20 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 23:39:20 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 23:39:20 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 23:39:38 views Login attempt for user: 2024005
+[INFO] 2024-12-22 23:39:40 views Cleared 1 existing sessions for user 2024005
+[INFO] 2024-12-22 23:39:40 views Processing student login for 2024005
+[DEBUG] 2024-12-22 23:39:40 views Student IP address: 192.168.3.20
+[INFO] 2024-12-22 23:39:40 views Got channel layer: <class 'channels_redis.core.RedisChannelLayer'>
+[DEBUG] 2024-12-22 23:39:40 views Available channel groups: {}
+[INFO] 2024-12-22 23:39:40 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-22 15:39:40'}}
+[ERROR] 2024-12-22 23:39:42 views Failed to send group message: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 281, in connect
+    await self.retry.call_with_retry(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 697, in _connect
+    reader, writer = await asyncio.open_connection(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1120, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1102, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1005, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 727, in sock_connect
+    return await self._proactor.connect(sock, address)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 798, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 594, in finish_connect
+    ov.getresult()
+ConnectionRefusedError: [WinError 1225] 远程计算机拒绝网络连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\site\批改作业13\core\views.py", line 101, in login_view
+    async_to_sync(channel_layer.group_send)(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\channels_redis\core.py", line 523, in group_send
+    await connection.zremrangebyscore(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\client.py", line 611, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1064, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1097, in ensure_connection
+    await connection.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 289, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+[INFO] 2024-12-22 23:39:42 views Login successful for 2024005, redirecting to dashboard
+[INFO] 2024-12-22 23:43:05 views Login attempt for user: teacher
+[INFO] 2024-12-22 23:43:06 views Teacher login - clearing student sessions
+[INFO] 2024-12-22 23:43:06 views Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 23:43:06 views Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 23:43:28 views Login attempt for user: 2024016
+[INFO] 2024-12-22 23:43:29 views Cleared 0 existing sessions for user 2024016
+[INFO] 2024-12-22 23:43:29 views Processing student login for 2024016
+[DEBUG] 2024-12-22 23:43:29 views Student IP address: 192.168.3.20
+[INFO] 2024-12-22 23:43:29 views Got channel layer: <class 'channels_redis.core.RedisChannelLayer'>
+[DEBUG] 2024-12-22 23:43:29 views Available channel groups: {}
+[INFO] 2024-12-22 23:43:29 views Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024016', 'name': '许敏', 'ip': '192.168.3.20', 'last_login': '2024-12-22 15:43:29'}}
+[ERROR] 2024-12-22 23:43:31 views Failed to send group message: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 281, in connect
+    await self.retry.call_with_retry(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 697, in _connect
+    reader, writer = await asyncio.open_connection(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1120, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1102, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1005, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 727, in sock_connect
+    return await self._proactor.connect(sock, address)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 798, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 594, in finish_connect
+    ov.getresult()
+ConnectionRefusedError: [WinError 1225] 远程计算机拒绝网络连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\site\批改作业13\core\views.py", line 101, in login_view
+    async_to_sync(channel_layer.group_send)(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\channels_redis\core.py", line 523, in group_send
+    await connection.zremrangebyscore(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\client.py", line 611, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1064, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1097, in ensure_connection
+    await connection.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 289, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+[INFO] 2024-12-22 23:43:31 views Login successful for 2024016, redirecting to dashboard

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <h1>WebSocket Test</h1>
+    <div id="status">Status: Connecting...</div>
+    <div id="messages"></div>
+    <input type="text" id="messageInput" placeholder="Type a message">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        const messagesDiv = document.getElementById('messages');
+        const statusDiv = document.getElementById('status');
+        const messageInput = document.getElementById('messageInput');
+        
+        // 创建 WebSocket 连接
+        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const ws = new WebSocket(`${protocol}//${window.location.host}/ws/test/`);
+
+        // 连接建立时的处理
+        ws.onopen = function() {
+            statusDiv.textContent = 'Status: Connected';
+            console.log('WebSocket connected');
+        };
+
+        // 接收消息的处理
+        ws.onmessage = function(event) {
+            console.log('Received:', event.data);
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = `Received: ${event.data}`;
+            messagesDiv.appendChild(messageDiv);
+        };
+
+        // 连接关闭时的处理
+        ws.onclose = function(event) {
+            statusDiv.textContent = `Status: Disconnected (${event.code})`;
+            console.log('WebSocket closed:', event);
+        };
+
+        // 发生错误时的处理
+        ws.onerror = function(error) {
+            statusDiv.textContent = 'Status: Error occurred';
+            console.error('WebSocket error:', error);
+        };
+
+        // 发送消息的函数
+        function sendMessage() {
+            const message = messageInput.value;
+            if (message) {
+                ws.send(message);
+                const messageDiv = document.createElement('div');
+                messageDiv.textContent = `Sent: ${message}`;
+                messagesDiv.appendChild(messageDiv);
+                messageInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html> 

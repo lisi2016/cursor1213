@@ -7,8 +7,8 @@
         <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5 class="mb-0">在线学生</h5>
-                <div id="ws-status" class="alert alert-info mb-0 py-1">
-                    WebSocket 状态: <span id="ws-status-text">正在连接...</span>
+                <div id="websocket-status" class="alert alert-info mb-0 py-1">
+                    WebSocket 状态: 正在连接...
                 </div>
             </div>
             <div class="card-body">
@@ -141,6 +141,10 @@
             </div>
         </div>
     </div>
+</div>
+
+<div id="student-list" class="student-list-container">
+    <!-- 学生状态将通过 JavaScript 动态添加到这里 -->
 </div>
 {% endblock %}
 

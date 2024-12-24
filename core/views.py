@@ -37,80 +37,74 @@ def login_view(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         
-        logger.info(f"Login attempt for user: {username}")
-        
         user = authenticate(username=username, password=password)
         
         if user is not None:
-            if user.is_teacher:
-                logger.info("Teacher login - clearing student sessions")
-                User.objects.filter(is_teacher=False).update(
-                    ip_address=None,
-                    last_login=None
-                )
-            
-            # 清除当前用户的其他会话
-            session_count = Session.objects.filter(
-                expire_date__gte=timezone.now(),
-                session_data__contains=str(user.id)
-            ).delete()[0]
-            logger.info(f"Cleared {session_count} existing sessions for user {username}")
-            
             login(request, user)
             
             if not user.is_teacher:
-                logger.info(f"Processing student login for {user.student_id}")
-                x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-                ip = x_forwarded_for.split(',')[0].strip() if x_forwarded_for else request.META.get('REMOTE_ADDR')
-                
-                logger.debug(f"Student IP address: {ip}")
-                
-                user.ip_address = ip
-                user.last_login = timezone.now()
-                user.save(update_fields=['ip_address', 'last_login'])
-                
-                # WebSocket 消息发送
                 try:
-                    channel_layer = get_channel_layer()
-                    logger.info(f"Got channel layer: {type(channel_layer)}")
+                    # 获取用户IP
+                    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+                    ip = x_forwarded_for.split(',')[0].strip() if x_forwarded_for else request.META.get('REMOTE_ADDR')
                     
-                    # 检查 channel layer 是否可用
-                    if channel_layer is None:
-                        logger.error("Channel layer is None!")
-                        raise Exception("Channel layer not available")
-                        
-                    # 检查 teacher_group 是否存在
-                    groups = getattr(channel_layer, 'groups', {})
-                    logger.debug(f"Available channel groups: {groups}")
+                    # 更新用户信息
+                    user.ip_address = ip
+                    user.last_login = timezone.now()
+                    user.save(update_fields=['ip_address', 'last_login'])
                     
+                    # 准备 WebSocket 消息
                     message = {
                         "type": "student_status",
                         "data": {
                             "action": "login",
                             "student_id": user.student_id,
-                            "name": user.first_name,
+                            "name": user.get_full_name() or user.username,
                             "ip": ip,
-                            "last_login": user.last_login.strftime('%Y-%m-%d %H:%M:%S')
+                            "last_login": timezone.localtime().strftime('%Y-%m-%d %H:%M:%S')
                         }
                     }
                     
-                    logger.info(f"Preparing to send WebSocket message: {message}")
+                    print("="*50)
+                    print(f"学生登录信息:")
+                    print(f"用户名: {username}")
+                    print(f"学号: {user.student_id}")
+                    print(f"IP地址: {ip}")
+                    print(f"登录时间: {timezone.localtime().strftime('%Y-%m-%d %H:%M:%S')}")
                     
-                    # 使用 try-except 包装 group_send
+                    # 发送 WebSocket 消息
                     try:
+                        channel_layer = get_channel_layer()
+                        if not channel_layer:
+                            print("错误: 无法获取 channel layer")
+                            return redirect('student_dashboard')
+                            
+                        # 检查教师组是否存在
+                        groups = getattr(channel_layer, 'groups', {})
+                        print(f"当前活动的 channel layer 组: {groups}")
+                        print(f"准备发送的消息: {message}")
+                        
+                        # 发送消息到教师组
                         async_to_sync(channel_layer.group_send)(
                             "teacher_group",
-                            message
+                            {
+                                "type": "student_status",
+                                "data": message['data']
+                            }
                         )
-                        logger.info("WebSocket message sent successfully")
-                    except Exception as e:
-                        logger.error(f"Failed to send group message: {str(e)}", exc_info=True)
+                        print("WebSocket 消息发送成功")
+                        print("="*50)
                         
+                    except Exception as e:
+                        print(f"发送 WebSocket 消息时出错: {str(e)}")
+                        print(f"错误类型: {type(e)}")
+                        print(f"错误详情: {str(e)}")
+                        
+                    return redirect('student_dashboard')
+                    
                 except Exception as e:
-                    logger.error(f"WebSocket error: {str(e)}", exc_info=True)
-                    logger.error(f"Request META: {request.META}")
+                    print(f"处理学生登录时出错: {str(e)}")
             
-            logger.info(f"Login successful for {username}, redirecting to dashboard")
             return redirect('teacher_dashboard' if user.is_teacher else 'student_dashboard')
         else:
             logger.warning(f"Login failed for username: {username}")
@@ -186,7 +180,7 @@ def import_students(request):
                         error_messages.append(f"第{index+2}行姓名不能为空")
                         continue
                     
-                    # ���查学号是否已存在
+                    # 查学号是否已存在
                     if User.objects.filter(username=str(row['学号'])).exists():
                         error_messages.append(f"第{index+2}行：学号{row['学号']}已存在")
                         continue
@@ -205,7 +199,7 @@ def import_students(request):
                 except Exception as e:
                     error_messages.append(f"第{index+2}行：{str(e)}")
             
-            # 显示导入结果
+            # 导入结果
             if success_count > 0:
                 messages.success(request, f'成功导入{success_count}条记录')
             if error_messages:
@@ -340,7 +334,7 @@ def distribute_assignments(request):
         if success_count > 0:
             message = f'成功分发 {success_count} 个作业'
             if error_messages:
-                message += f'，但有 {len(error_messages)} 个分发失败'
+                message += f'，但有 {len(error_messages)} 个分��失败'
             return JsonResponse({
                 'status': 'success',
                 'message': message
@@ -472,7 +466,7 @@ def export_grades(request):
         raise PermissionDenied
         
     try:
-        # 获取选择的班级
+        # 获取选的班级
         class_name = request.GET.get('class_name')
         
         # 构建查询条件
@@ -495,7 +489,7 @@ def export_grades(request):
         ws.title = "成绩统计"
         
         # 设置表头
-        headers = ['学号', '姓名', '班级', '作业名称', '成绩', '下载状态', '下载时间', '分发��间']
+        headers = ['学号', '姓名', '班级', '作业名称', '成绩', '下载状态', '下载时间', '分发时间']
         for col, header in enumerate(headers, 1):
             cell = ws.cell(row=1, column=col)
             cell.value = header
@@ -619,7 +613,7 @@ def download_import_template(request):
         cell.font = Font(bold=True)
         cell.fill = PatternFill(start_color="CCCCCC", end_color="CCCCCC", fill_type="solid")
     
-    # 加示例数据
+    # 示例数据
     example_data = [
         ['2024001', '张三', '计算机1班'],
         ['2024002', '李四', '算机1班']
@@ -639,7 +633,7 @@ def download_import_template(request):
     )
     response['Content-Disposition'] = 'attachment; filename=student_import_template.xlsx'
     
-    # 存工作簿到响应
+    # 存工簿到响应
     wb.save(response)
     return response 
 
@@ -669,7 +663,7 @@ def delete_assignment(request, assignment_id):
             
             # 删除作业记录
             assignment.delete()
-            print(f"作业记录已删除") # 调试日志
+            print(f"作业记录删除") # 调试日志
             
             return JsonResponse({
                 'status': 'success',
@@ -709,7 +703,7 @@ def delete_assignments(request):
         if not assignment_ids:
             return JsonResponse({
                 'status': 'error',
-                'message': '��选择要删除的作业'
+                'message': '请选择要删除的作业'
             })
             
         assignments = Assignment.objects.filter(id__in=assignment_ids)
@@ -744,8 +738,11 @@ def delete_assignments(request):
 
 @login_required
 def get_student_assignments(request):
-    if request.user.is_teacher:
-        raise PermissionDenied
+    if not request.user.is_authenticated or request.user.is_teacher:
+        return JsonResponse({
+            'status': 'error',
+            'message': '只有学生可以访问此接口'
+        }, status=403)
         
     assignments = Assignment.objects.filter(
         assigned_to=request.user
@@ -770,3 +767,46 @@ if not os.path.exists(settings.MEDIA_ROOT):
         print(f"Created MEDIA_ROOT directory: {settings.MEDIA_ROOT}")
     except Exception as e:
         print(f"创建 MEDIA_ROOT 目录失败: {str(e)}")
+
+def test_websocket(request):
+    return render(request, 'core/test_websocket.html')
+
+def student_login(request):
+    try:
+        # 处理登录逻辑...
+        
+        # 发送WebSocket消息
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            "teacher_group",
+            {
+                "type": "student_status",
+                "type": "student_login",
+                "student": {
+                    "student_id": request.user.student_id,
+                    "name": request.user.first_name,
+                    "ip": request.META.get('REMOTE_ADDR'),
+                    "login_time": timezone.now().strftime('%Y-%m-%d %H:%M:%S')
+                }
+            }
+        )
+        logger.info(f"Student login WebSocket message sent for {request.user.student_id}")
+        
+    except Exception as e:
+        logger.error(f"Error in student_login: {str(e)}", exc_info=True)
+        # 处理错误...
+
+def student_logout_view(request):
+    if not request.user.is_teacher:
+        student_id = request.user.student_id
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            "teacher_group",
+            {
+                "type": "student_status",
+                "type": "student_logout",
+                "student_id": student_id
+            }
+        )
+    
+    # 继续原有的登出逻辑...

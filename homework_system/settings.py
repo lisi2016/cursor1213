@@ -13,7 +13,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['*', '192.168.3.20', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
-    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -21,7 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',
-    'core.apps.CoreConfig',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -84,10 +83,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'core/static'),
+    os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -106,8 +105,20 @@ LOGOUT_REDIRECT_URL = '/'
 ASGI_APPLICATION = 'homework_system.asgi.application'
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer'
-    }
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+            "symmetric_encryption_keys": [SECRET_KEY],
+            "capacity": 1500,
+            "expiry": 10,  # 消息过期时间（秒）
+            "channel_capacity": {
+                "http.request": 100,
+                "http.response": 100,
+                "websocket.send": 100,
+                "websocket.receive": 100
+            }
+        },
+    },
 }
 
 CSRF_TRUSTED_ORIGINS = [
@@ -122,7 +133,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '[{levelname}] {asctime} {module} {message}',
+            'format': '[{levelname}] {asctime} {module} {process:d} {thread:d} {message}',
             'style': '{',
             'datefmt': '%Y-%m-%d %H:%M:%S'
         },
@@ -134,19 +145,24 @@ LOGGING = {
         },
         'file': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': 'websocket.log',
+            'filename': 'debug.log',  # 日志文件路径
             'formatter': 'verbose',
             'maxBytes': 1024 * 1024 * 5,  # 5 MB
             'backupCount': 5,
         },
     },
     'loggers': {
-        'core.views': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'django.channels': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
         },
-        'channels': {  # 添加channels的日志记录
+        'core': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,

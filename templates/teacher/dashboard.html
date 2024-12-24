@@ -1,18 +1,22 @@
-<div class="student-machines">
-    <h3>学生机状态</h3>
-    <div class="machine-list">
-        {% if student_machines %}
-            {% for machine in student_machines %}
-                <div class="machine-item">
-                    <div class="ip-address">{{ machine.ip }}</div>
-                    <div class="student-info">
-                        <span class="student-name">{{ machine.name }}</span>
-                        <span class="login-time">登录时间: {{ machine.login_time|date:"Y-m-d H:i:s" }}</span>
-                    </div>
-                </div>
-            {% endfor %}
-        {% else %}
-            <p>当前没有学生在线</p>
-        {% endif %}
-    </div>
-</div> 
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link href="{% static 'core/css/style.css' %}" rel="stylesheet">
+<!-- 添加Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- 在线学生部分 -->
+    {% include 'teacher/online_students.html' %}
+    
+    <!-- 其他内容... -->
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- 添加WebSocket处理脚本 -->
+<script src="{% static 'core/js/online-students.js' %}"></script>
+{% endblock %} 

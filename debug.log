@@ -11,3 +11,2192 @@ INFO 2024-12-22 15:31:59,714 views 12912 19628 Channel layer configuration: {'ex
 INFO 2024-12-22 15:31:59,714 views 12912 19628 Sending WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '柏清怡', 'ip': '192.168.3.20', 'last_login': '2024-12-22 07:31:59'}}
 INFO 2024-12-22 15:31:59,717 views 12912 19628 WebSocket notification sent successfully
 INFO 2024-12-22 15:31:59,717 views 12912 19628 Login successful for 2024015, redirecting to dashboard
+[INFO] 2024-12-22 23:50:32 autoreload 1392 9808 Watching for file changes with StatReloader
+[INFO] 2024-12-22 23:50:32 autoreload 6396 25780 Watching for file changes with StatReloader
+[WARNING] 2024-12-22 23:50:34 log 1392 27472 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:50:34 basehttp 1392 27472 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:50:34 basehttp 1392 27472 - Broken pipe from ('192.168.3.20', 4491)
+[WARNING] 2024-12-22 23:50:40 log 1392 4916 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:50:40 basehttp 1392 4916 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:50:46 log 6396 9824 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:50:46 basehttp 6396 9824 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:50:46 basehttp 6396 9824 - Broken pipe from ('192.168.3.20', 4512)
+[INFO] 2024-12-22 23:50:49 autoreload 23816 27204 Watching for file changes with StatReloader
+[INFO] 2024-12-22 23:50:50 basehttp 6396 21788 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:50:52 log 6396 24844 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:50:52 basehttp 6396 24844 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:51:00 log 6396 5772 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:51:00 basehttp 6396 5772 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:51:08 log 6396 14952 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:51:08 basehttp 6396 14952 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:51:14 basehttp 6396 21788 "GET / HTTP/1.1" 200 2648
+[INFO] 2024-12-22 23:51:21 views 6396 21788 Login attempt for user: teacher
+[INFO] 2024-12-22 23:51:22 views 6396 21788 Teacher login - clearing student sessions
+[INFO] 2024-12-22 23:51:22 views 6396 21788 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-22 23:51:22 views 6396 21788 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-22 23:51:22 basehttp 6396 21788 "POST / HTTP/1.1" 302 0
+[INFO] 2024-12-22 23:51:22 basehttp 6396 21788 "GET /teacher/ HTTP/1.1" 200 6533
+[INFO] 2024-12-22 23:51:23 basehttp 6396 21788 "GET /static/core/js/teacher.js HTTP/1.1" 304 0
+[WARNING] 2024-12-22 23:51:28 log 6396 21788 Forbidden: /student/assignments/
+[WARNING] 2024-12-22 23:51:28 basehttp 6396 21788 "GET /student/assignments/ HTTP/1.1" 403 100
+[WARNING] 2024-12-22 23:51:32 log 6396 21592 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:51:32 basehttp 6396 21592 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:51:32 basehttp 6396 21788 "GET / HTTP/1.1" 200 2424
+[INFO] 2024-12-22 23:51:40 views 6396 21788 Login attempt for user: 2024020
+[INFO] 2024-12-22 23:51:42 views 6396 21788 Cleared 0 existing sessions for user 2024020
+[INFO] 2024-12-22 23:51:42 views 6396 21788 Processing student login for 2024020
+[DEBUG] 2024-12-22 23:51:42 views 6396 21788 Student IP address: 192.168.3.20
+[INFO] 2024-12-22 23:51:42 views 6396 21788 Got channel layer: <class 'channels_redis.core.RedisChannelLayer'>
+[DEBUG] 2024-12-22 23:51:42 views 6396 21788 Available channel groups: {}
+[INFO] 2024-12-22 23:51:42 views 6396 21788 Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024020', 'name': '严悦明', 'ip': '192.168.3.20', 'last_login': '2024-12-22 15:51:42'}}
+[WARNING] 2024-12-22 23:51:42 log 6396 24744 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:51:42 basehttp 6396 24744 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:51:42 basehttp 6396 24744 - Broken pipe from ('192.168.3.20', 4717)
+[INFO] 2024-12-22 23:51:43 views 6396 10732 Login attempt for user: 2024020
+[ERROR] 2024-12-22 23:51:44 views 6396 21788 Failed to send group message: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 281, in connect
+    await self.retry.call_with_retry(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 697, in _connect
+    reader, writer = await asyncio.open_connection(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1120, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1102, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1005, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 727, in sock_connect
+    return await self._proactor.connect(sock, address)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 798, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 594, in finish_connect
+    ov.getresult()
+ConnectionRefusedError: [WinError 1225] 远程计算机拒绝网络连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\site\批改作业13\core\views.py", line 101, in login_view
+    async_to_sync(channel_layer.group_send)(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\channels_redis\core.py", line 523, in group_send
+    await connection.zremrangebyscore(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\client.py", line 611, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1064, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1097, in ensure_connection
+    await connection.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 289, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+[INFO] 2024-12-22 23:51:44 views 6396 21788 Login successful for 2024020, redirecting to dashboard
+[INFO] 2024-12-22 23:51:44 basehttp 6396 21788 - Broken pipe from ('192.168.3.20', 4514)
+[INFO] 2024-12-22 23:51:44 views 6396 10732 Cleared 0 existing sessions for user 2024020
+[INFO] 2024-12-22 23:51:45 views 6396 10732 Processing student login for 2024020
+[DEBUG] 2024-12-22 23:51:45 views 6396 10732 Student IP address: 192.168.3.20
+[INFO] 2024-12-22 23:51:45 views 6396 10732 Got channel layer: <class 'channels_redis.core.RedisChannelLayer'>
+[DEBUG] 2024-12-22 23:51:45 views 6396 10732 Available channel groups: {}
+[INFO] 2024-12-22 23:51:45 views 6396 10732 Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024020', 'name': '严悦明', 'ip': '192.168.3.20', 'last_login': '2024-12-22 15:51:45'}}
+[ERROR] 2024-12-22 23:51:47 views 6396 10732 Failed to send group message: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 281, in connect
+    await self.retry.call_with_retry(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 697, in _connect
+    reader, writer = await asyncio.open_connection(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1120, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1102, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1005, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 727, in sock_connect
+    return await self._proactor.connect(sock, address)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 798, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 594, in finish_connect
+    ov.getresult()
+ConnectionRefusedError: [WinError 1225] 远程计算机拒绝网络连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\site\批改作业13\core\views.py", line 101, in login_view
+    async_to_sync(channel_layer.group_send)(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 254, in __call__
+    return call_result.result()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 331, in main_wrap
+    result = await self.awaitable(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\channels_redis\core.py", line 523, in group_send
+    await connection.zremrangebyscore(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\client.py", line 611, in execute_command
+    conn = self.connection or await pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1064, in get_connection
+    await self.ensure_connection(connection)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 1097, in ensure_connection
+    await connection.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\asyncio\connection.py", line 289, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 22 connecting to 127.0.0.1:6379. 远程计算机拒绝网络连接。.
+[INFO] 2024-12-22 23:51:47 views 6396 10732 Login successful for 2024020, redirecting to dashboard
+[INFO] 2024-12-22 23:51:47 basehttp 6396 10732 "POST / HTTP/1.1" 302 0
+[INFO] 2024-12-22 23:51:47 basehttp 6396 10732 "GET /student/ HTTP/1.1" 200 2615
+[WARNING] 2024-12-22 23:51:52 log 6396 13668 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:51:52 basehttp 6396 13668 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:52:00 log 6396 20936 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:00 basehttp 6396 20936 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:52:00 basehttp 6396 20936 - Broken pipe from ('192.168.3.20', 4762)
+[WARNING] 2024-12-22 23:52:06 log 6396 21404 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:06 basehttp 6396 21404 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:52:06 basehttp 6396 21404 - Broken pipe from ('192.168.3.20', 4779)
+[INFO] 2024-12-22 23:52:14 basehttp 6396 10732 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:52:15 log 6396 14136 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:15 basehttp 6396 14136 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:52:26 log 6396 15056 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:26 basehttp 6396 15056 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:52:32 log 6396 9552 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:32 basehttp 6396 9552 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:52:32 basehttp 6396 9552 - Broken pipe from ('192.168.3.20', 4903)
+[WARNING] 2024-12-22 23:52:39 log 6396 25020 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:39 basehttp 6396 25020 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:52:45 basehttp 6396 10732 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:52:47 log 6396 27288 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:47 basehttp 6396 27288 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:52:55 log 6396 5476 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:52:55 basehttp 6396 5476 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:53:04 log 6396 6304 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:53:04 basehttp 6396 6304 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:53:13 log 6396 26240 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:53:13 basehttp 6396 26240 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:53:15 basehttp 6396 10732 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:53:20 log 6396 4600 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:53:20 basehttp 6396 4600 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:53:23 autoreload 6396 25780 D:\site\批改作业13\homework_system\settings.py changed, reloading.
+[INFO] 2024-12-22 23:53:25 autoreload 5668 17080 Watching for file changes with StatReloader
+[WARNING] 2024-12-22 23:53:28 log 5668 24724 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:53:28 basehttp 5668 24724 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:53:35 log 5668 28268 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:53:35 basehttp 5668 28268 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:53:43 log 5668 12492 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:53:43 basehttp 5668 12492 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:53:45 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:53:52 log 5668 8076 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:53:52 basehttp 5668 8076 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:54:01 log 5668 1564 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:54:01 basehttp 5668 1564 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:54:09 log 5668 21444 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:54:09 basehttp 5668 21444 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:54:17 log 5668 26464 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:54:17 basehttp 5668 26464 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:54:27 log 5668 15160 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:54:27 basehttp 5668 15160 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:54:33 log 5668 19432 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:54:33 basehttp 5668 19432 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:54:41 log 5668 21248 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:54:41 basehttp 5668 21248 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:54:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:54:51 log 5668 26528 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:54:51 basehttp 5668 26528 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:55:00 log 5668 9292 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:55:00 basehttp 5668 9292 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:55:10 log 5668 23792 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:55:10 basehttp 5668 23792 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:55:18 log 5668 26880 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:55:18 basehttp 5668 26880 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:55:28 log 5668 18112 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:55:28 basehttp 5668 18112 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:55:39 log 5668 27628 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:55:39 basehttp 5668 27628 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:55:47 log 5668 24820 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:55:47 basehttp 5668 24820 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:55:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:55:56 log 5668 19300 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:55:56 basehttp 5668 19300 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:56:06 log 5668 3680 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:56:06 basehttp 5668 3680 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:56:14 log 5668 2700 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:56:14 basehttp 5668 2700 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:56:22 log 5668 24512 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:56:22 basehttp 5668 24512 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:56:32 log 5668 27908 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:56:32 basehttp 5668 27908 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:56:41 log 5668 24924 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:56:41 basehttp 5668 24924 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:56:50 log 5668 24652 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:56:50 basehttp 5668 24652 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:56:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:56:58 log 5668 18724 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:56:58 basehttp 5668 18724 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:56:58 basehttp 5668 18724 - Broken pipe from ('192.168.3.20', 5364)
+[WARNING] 2024-12-22 23:57:06 log 5668 20608 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:06 basehttp 5668 20608 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:57:14 log 5668 10756 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:14 basehttp 5668 10756 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:57:23 log 5668 28640 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:23 basehttp 5668 28640 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:57:29 log 5668 14556 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:29 basehttp 5668 14556 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:57:35 log 5668 19252 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:35 basehttp 5668 19252 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:57:41 log 5668 24620 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:41 basehttp 5668 24620 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:57:47 log 5668 17520 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:47 basehttp 5668 17520 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:57:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:57:53 log 5668 27408 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:53 basehttp 5668 27408 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:57:53 basehttp 5668 27408 - Broken pipe from ('192.168.3.20', 5444)
+[WARNING] 2024-12-22 23:57:59 log 5668 5660 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:57:59 basehttp 5668 5660 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:58:05 log 5668 116 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:05 basehttp 5668 116 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:58:05 basehttp 5668 116 - Broken pipe from ('192.168.3.20', 5458)
+[WARNING] 2024-12-22 23:58:11 log 5668 9836 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:11 basehttp 5668 9836 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:58:17 log 5668 4676 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:17 basehttp 5668 4676 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:58:23 log 5668 20428 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:23 basehttp 5668 20428 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:58:29 log 5668 14104 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:29 basehttp 5668 14104 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:58:35 log 5668 15632 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:35 basehttp 5668 15632 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:58:41 log 5668 19628 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:41 basehttp 5668 19628 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:58:47 log 5668 26912 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:47 basehttp 5668 26912 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:58:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:58:53 log 5668 12860 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:58:53 basehttp 5668 12860 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:58:53 basehttp 5668 12860 - Broken pipe from ('192.168.3.20', 5536)
+[WARNING] 2024-12-22 23:59:00 log 5668 6484 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:00 basehttp 5668 6484 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:59:07 log 5668 26856 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:07 basehttp 5668 26856 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:59:18 log 5668 25872 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:18 basehttp 5668 25872 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:59:28 log 5668 11728 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:28 basehttp 5668 11728 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:59:34 log 5668 27352 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:34 basehttp 5668 27352 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:59:34 basehttp 5668 27352 - Broken pipe from ('192.168.3.20', 5572)
+[WARNING] 2024-12-22 23:59:40 log 5668 11424 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:40 basehttp 5668 11424 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:59:46 log 5668 23864 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:46 basehttp 5668 23864 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-22 23:59:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-22 23:59:52 log 5668 28372 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:52 basehttp 5668 28372 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-22 23:59:58 log 5668 24364 Not Found: /ws/teacher/
+[WARNING] 2024-12-22 23:59:58 basehttp 5668 24364 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:04 log 5668 25788 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:04 basehttp 5668 25788 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:10 log 5668 25688 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:10 basehttp 5668 25688 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:16 log 5668 28164 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:16 basehttp 5668 28164 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:22 log 5668 27560 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:22 basehttp 5668 27560 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:28 log 5668 23756 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:28 basehttp 5668 23756 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:34 log 5668 6972 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:34 basehttp 5668 6972 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:00:34 basehttp 5668 6972 - Broken pipe from ('192.168.3.20', 5715)
+[WARNING] 2024-12-23 00:00:40 log 5668 22576 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:40 basehttp 5668 22576 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:46 log 5668 15788 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:46 basehttp 5668 15788 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:00:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:00:52 log 5668 25416 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:52 basehttp 5668 25416 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:00:58 log 5668 26024 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:00:58 basehttp 5668 26024 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:01:05 log 5668 128 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:05 basehttp 5668 128 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:01:15 log 5668 18824 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:15 basehttp 5668 18824 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:01:23 log 5668 26400 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:23 basehttp 5668 26400 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:01:23 basehttp 5668 26400 - Broken pipe from ('192.168.3.20', 5777)
+[WARNING] 2024-12-23 00:01:30 log 5668 28516 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:30 basehttp 5668 28516 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:01:36 log 5668 28164 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:36 basehttp 5668 28164 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:01:42 log 5668 20920 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:42 basehttp 5668 20920 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:01:48 log 5668 28232 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:48 basehttp 5668 28232 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:01:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:01:54 log 5668 1980 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:01:54 basehttp 5668 1980 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:02:00 log 5668 6648 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:00 basehttp 5668 6648 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:02:06 log 5668 28040 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:06 basehttp 5668 28040 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:02:12 log 5668 11960 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:12 basehttp 5668 11960 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:02:12 basehttp 5668 11960 - Broken pipe from ('192.168.3.20', 5833)
+[WARNING] 2024-12-23 00:02:18 log 5668 24592 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:18 basehttp 5668 24592 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:02:24 log 5668 10404 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:24 basehttp 5668 10404 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:02:30 log 5668 17884 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:30 basehttp 5668 17884 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:02:36 log 5668 28612 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:36 basehttp 5668 28612 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:02:36 basehttp 5668 28612 - Broken pipe from ('192.168.3.20', 5867)
+[WARNING] 2024-12-23 00:02:42 log 5668 26584 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:42 basehttp 5668 26584 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:02:48 log 5668 25584 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:48 basehttp 5668 25584 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:02:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:02:54 log 5668 25596 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:02:54 basehttp 5668 25596 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:03:01 log 5668 8736 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:01 basehttp 5668 8736 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:03:08 log 5668 24724 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:08 basehttp 5668 24724 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:03:16 log 5668 22796 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:16 basehttp 5668 22796 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:03:25 log 5668 26460 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:25 basehttp 5668 26460 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:03:34 log 5668 25728 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:34 basehttp 5668 25728 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:03:34 basehttp 5668 25728 - Broken pipe from ('192.168.3.20', 5944)
+[WARNING] 2024-12-23 00:03:39 log 5668 17460 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:39 basehttp 5668 17460 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:03:45 log 5668 14236 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:45 basehttp 5668 14236 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:03:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:03:51 log 5668 28020 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:51 basehttp 5668 28020 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:03:51 basehttp 5668 28020 - Broken pipe from ('192.168.3.20', 5978)
+[WARNING] 2024-12-23 00:03:57 log 5668 13340 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:03:57 basehttp 5668 13340 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:03 log 5668 26784 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:03 basehttp 5668 26784 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:09 log 5668 26444 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:09 basehttp 5668 26444 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:15 log 5668 25456 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:15 basehttp 5668 25456 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:21 log 5668 26660 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:21 basehttp 5668 26660 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:27 log 5668 8920 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:27 basehttp 5668 8920 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:33 log 5668 27456 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:33 basehttp 5668 27456 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:39 log 5668 23992 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:39 basehttp 5668 23992 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:45 log 5668 26716 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:45 basehttp 5668 26716 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:04:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:04:51 log 5668 25668 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:51 basehttp 5668 25668 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:04:58 log 5668 27020 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:04:58 basehttp 5668 27020 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:05:03 log 5668 24504 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:05:03 basehttp 5668 24504 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:05:11 log 5668 27516 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:05:11 basehttp 5668 27516 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:05:19 log 5668 26004 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:05:19 basehttp 5668 26004 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:05:30 log 5668 8488 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:05:30 basehttp 5668 8488 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:05:39 log 5668 24228 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:05:39 basehttp 5668 24228 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:05:49 log 5668 23072 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:05:49 basehttp 5668 23072 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:05:49 basehttp 5668 23072 - Broken pipe from ('192.168.3.20', 6477)
+[INFO] 2024-12-23 00:05:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:05:55 log 5668 12888 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:05:55 basehttp 5668 12888 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:06:02 log 5668 24856 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:06:02 basehttp 5668 24856 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:06:12 log 5668 2596 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:06:12 basehttp 5668 2596 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:06:20 log 5668 12812 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:06:20 basehttp 5668 12812 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:06:28 log 5668 15232 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:06:28 basehttp 5668 15232 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:06:35 log 5668 6004 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:06:35 basehttp 5668 6004 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:06:44 log 5668 18256 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:06:44 basehttp 5668 18256 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:06:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:06:53 log 5668 10468 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:06:53 basehttp 5668 10468 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:02 log 5668 17632 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:02 basehttp 5668 17632 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:08 log 5668 18724 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:08 basehttp 5668 18724 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:16 log 5668 25632 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:16 basehttp 5668 25632 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:23 log 5668 8260 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:23 basehttp 5668 8260 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:32 log 5668 27424 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:32 basehttp 5668 27424 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:37 log 5668 12888 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:37 basehttp 5668 12888 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:43 log 5668 1980 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:43 basehttp 5668 1980 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:07:49 log 5668 17568 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:49 basehttp 5668 17568 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:07:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:07:55 log 5668 8460 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:07:55 basehttp 5668 8460 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:07:55 basehttp 5668 8460 - Broken pipe from ('192.168.3.20', 7425)
+[WARNING] 2024-12-23 00:08:01 log 5668 17308 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:01 basehttp 5668 17308 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:07 log 5668 20412 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:07 basehttp 5668 20412 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:13 log 5668 28600 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:13 basehttp 5668 28600 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:19 log 5668 28420 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:19 basehttp 5668 28420 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:25 log 5668 1476 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:25 basehttp 5668 1476 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:31 log 5668 28188 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:31 basehttp 5668 28188 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:37 log 5668 21872 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:37 basehttp 5668 21872 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:43 log 5668 27268 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:43 basehttp 5668 27268 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:08:49 log 5668 25532 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:49 basehttp 5668 25532 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:08:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:08:55 log 5668 19668 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:08:55 basehttp 5668 19668 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:02 log 5668 27524 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:02 basehttp 5668 27524 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:10 log 5668 21368 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:10 basehttp 5668 21368 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:18 log 5668 6300 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:18 basehttp 5668 6300 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:25 log 5668 23536 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:25 basehttp 5668 23536 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:34 log 5668 27192 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:34 basehttp 5668 27192 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:39 log 5668 25692 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:39 basehttp 5668 25692 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:45 log 5668 6668 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:45 basehttp 5668 6668 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:09:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:09:51 log 5668 15136 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:51 basehttp 5668 15136 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:09:57 log 5668 21428 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:09:57 basehttp 5668 21428 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:03 log 5668 27796 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:03 basehttp 5668 27796 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:09 log 5668 11576 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:09 basehttp 5668 11576 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:15 log 5668 26736 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:15 basehttp 5668 26736 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:10:15 basehttp 5668 26736 - Broken pipe from ('192.168.3.20', 8609)
+[WARNING] 2024-12-23 00:10:21 log 5668 8144 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:21 basehttp 5668 8144 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:27 log 5668 22576 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:27 basehttp 5668 22576 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:33 log 5668 27680 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:33 basehttp 5668 27680 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:39 log 5668 23740 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:39 basehttp 5668 23740 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:45 log 5668 12360 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:45 basehttp 5668 12360 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:10:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:10:51 log 5668 1820 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:51 basehttp 5668 1820 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:10:57 log 5668 26264 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:10:58 basehttp 5668 26264 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:11:04 log 5668 27756 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:04 basehttp 5668 27756 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:11:11 log 5668 13024 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:11 basehttp 5668 13024 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:11:19 log 5668 26168 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:19 basehttp 5668 26168 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:11:27 log 5668 23048 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:27 basehttp 5668 23048 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:11:36 log 5668 21508 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:36 basehttp 5668 21508 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:11:36 basehttp 5668 21508 - Broken pipe from ('192.168.3.20', 9266)
+[WARNING] 2024-12-23 00:11:41 log 5668 14524 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:41 basehttp 5668 14524 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:11:47 log 5668 23816 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:47 basehttp 5668 23816 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:11:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:11:53 log 5668 25464 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:53 basehttp 5668 25464 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:11:59 log 5668 7384 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:11:59 basehttp 5668 7384 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:05 log 5668 23860 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:05 basehttp 5668 23860 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:11 log 5668 12920 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:11 basehttp 5668 12920 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:17 log 5668 25100 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:17 basehttp 5668 25100 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:23 log 5668 21632 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:23 basehttp 5668 21632 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:29 log 5668 13776 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:29 basehttp 5668 13776 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:35 log 5668 20732 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:35 basehttp 5668 20732 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:41 log 5668 16976 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:41 basehttp 5668 16976 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:12:47 log 5668 12056 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:47 basehttp 5668 12056 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:12:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:12:53 log 5668 28088 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:12:53 basehttp 5668 28088 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:13:00 log 5668 28416 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:00 basehttp 5668 28416 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:13:06 log 5668 6716 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:06 basehttp 5668 6716 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:13:06 basehttp 5668 6716 - Broken pipe from ('192.168.3.20', 9989)
+[WARNING] 2024-12-23 00:13:13 log 5668 25704 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:13 basehttp 5668 25704 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:13:22 log 5668 5744 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:22 basehttp 5668 5744 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:13:30 log 5668 20172 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:30 basehttp 5668 20172 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:13:40 log 5668 26580 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:40 basehttp 5668 26580 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:13:46 log 5668 26148 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:46 basehttp 5668 26148 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:13:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:13:52 log 5668 12296 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:52 basehttp 5668 12296 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:13:58 log 5668 25784 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:13:58 basehttp 5668 25784 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:04 log 5668 20664 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:04 basehttp 5668 20664 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:10 log 5668 7280 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:10 basehttp 5668 7280 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:16 log 5668 28200 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:16 basehttp 5668 28200 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:22 log 5668 18656 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:22 basehttp 5668 18656 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:28 log 5668 24512 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:28 basehttp 5668 24512 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:34 log 5668 24152 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:34 basehttp 5668 24152 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:14:34 basehttp 5668 24152 - Broken pipe from ('192.168.3.20', 10692)
+[WARNING] 2024-12-23 00:14:40 log 5668 26540 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:40 basehttp 5668 26540 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:46 log 5668 9888 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:46 basehttp 5668 9888 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:14:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:14:52 log 5668 6408 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:52 basehttp 5668 6408 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:14:58 log 5668 21384 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:14:58 basehttp 5668 21384 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:15:04 log 5668 4076 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:04 basehttp 5668 4076 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:15:11 log 5668 11552 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:11 basehttp 5668 11552 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:15:18 log 5668 27816 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:18 basehttp 5668 27816 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:15:27 log 5668 25304 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:27 basehttp 5668 25304 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:15:36 log 5668 5472 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:36 basehttp 5668 5472 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:15:46 log 5668 27188 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:46 basehttp 5668 27188 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:15:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:15:51 log 5668 2664 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:51 basehttp 5668 2664 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:15:57 log 5668 26672 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:15:57 basehttp 5668 26672 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:03 log 5668 2272 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:03 basehttp 5668 2272 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:09 log 5668 28200 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:09 basehttp 5668 28200 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:15 log 5668 11964 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:15 basehttp 5668 11964 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:21 log 5668 24692 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:21 basehttp 5668 24692 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:27 log 5668 21220 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:27 basehttp 5668 21220 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:33 log 5668 28560 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:33 basehttp 5668 28560 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:39 log 5668 27016 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:39 basehttp 5668 27016 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:45 log 5668 15588 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:45 basehttp 5668 15588 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:16:50 basehttp 5668 1904 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:16:51 log 5668 25384 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:51 basehttp 5668 25384 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:16:57 log 5668 27184 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:16:57 basehttp 5668 27184 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:17:03 log 5668 6756 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:17:03 basehttp 5668 6756 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:17:09 log 5668 23768 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:17:09 basehttp 5668 23768 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:17:09 basehttp 5668 23768 - Broken pipe from ('192.168.3.20', 12069)
+[WARNING] 2024-12-23 00:17:16 log 5668 26844 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:17:16 basehttp 5668 26844 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:17:23 log 5668 17396 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:17:23 basehttp 5668 17396 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:17:31 log 5668 8828 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:17:31 basehttp 5668 8828 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:17:39 log 5668 27388 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:17:39 basehttp 5668 27388 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:01 log 5668 27612 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:01 basehttp 5668 27612 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:07 log 5668 8012 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:07 basehttp 5668 8012 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:18:07 basehttp 5668 8012 - Broken pipe from ('192.168.3.20', 14151)
+[WARNING] 2024-12-23 00:18:13 log 5668 10804 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:13 basehttp 5668 10804 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:19 log 5668 25580 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:19 basehttp 5668 25580 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:25 log 5668 12800 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:25 basehttp 5668 12800 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:31 log 5668 4600 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:31 basehttp 5668 4600 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:37 log 5668 26736 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:37 basehttp 5668 26736 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:43 log 5668 28444 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:43 basehttp 5668 28444 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:18:49 log 5668 1080 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:49 basehttp 5668 1080 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:18:50 basehttp 5668 27092 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:18:55 log 5668 6560 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:18:55 basehttp 5668 6560 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:19:01 log 5668 19252 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:01 basehttp 5668 19252 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:19:07 log 5668 26752 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:07 basehttp 5668 26752 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:19:13 log 5668 9552 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:13 basehttp 5668 9552 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:19:19 log 5668 27388 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:19 basehttp 5668 27388 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:19:26 log 5668 27600 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:26 basehttp 5668 27600 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:19:35 log 5668 7272 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:35 basehttp 5668 7272 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:19:44 log 5668 25732 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:44 basehttp 5668 25732 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:19:50 basehttp 5668 16532 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:19:54 log 5668 27796 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:19:54 basehttp 5668 27796 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:20:04 log 5668 27896 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:20:04 basehttp 5668 27896 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:20:14 log 5668 9288 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:20:14 basehttp 5668 9288 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:20:22 log 5668 28160 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:20:22 basehttp 5668 28160 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:20:28 log 5668 8168 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:20:28 basehttp 5668 8168 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:20:37 log 5668 13472 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:20:37 basehttp 5668 13472 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:20:47 log 5668 26132 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:20:47 basehttp 5668 26132 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:20:50 basehttp 5668 16532 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:20:54 log 5668 21316 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:20:54 basehttp 5668 21316 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:21:02 log 5668 27868 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:21:02 basehttp 5668 27868 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:21:13 log 5668 17308 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:21:13 basehttp 5668 17308 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:21:21 log 5668 27212 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:21:21 basehttp 5668 27212 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:21:31 log 5668 24308 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:21:31 basehttp 5668 24308 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:21:42 log 5668 25312 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:21:42 basehttp 5668 25312 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:21:50 basehttp 5668 16532 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:21:51 log 5668 28060 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:21:51 basehttp 5668 28060 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:21:51 basehttp 5668 28060 - Broken pipe from ('192.168.3.20', 2644)
+[WARNING] 2024-12-23 00:21:56 log 5668 5444 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:21:56 basehttp 5668 5444 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:02 log 5668 28560 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:02 basehttp 5668 28560 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:08 log 5668 27468 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:08 basehttp 5668 27468 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:22:08 basehttp 5668 27468 - Broken pipe from ('192.168.3.20', 2809)
+[WARNING] 2024-12-23 00:22:14 log 5668 22740 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:14 basehttp 5668 22740 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:20 log 5668 4188 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:20 basehttp 5668 4188 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:26 log 5668 13916 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:26 basehttp 5668 13916 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:32 log 5668 16536 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:32 basehttp 5668 16536 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:38 log 5668 27412 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:38 basehttp 5668 27412 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:44 log 5668 26396 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:44 basehttp 5668 26396 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:22:50 basehttp 5668 16532 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:22:50 log 5668 28176 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:50 basehttp 5668 28176 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:22:56 log 5668 25684 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:22:56 basehttp 5668 25684 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:23:02 log 5668 26364 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:02 basehttp 5668 26364 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:23:02 basehttp 5668 26364 - Broken pipe from ('192.168.3.20', 3247)
+[WARNING] 2024-12-23 00:23:08 log 5668 27108 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:08 basehttp 5668 27108 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:23:14 log 5668 20428 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:14 basehttp 5668 20428 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:23:14 basehttp 5668 20428 - Broken pipe from ('192.168.3.20', 3322)
+[WARNING] 2024-12-23 00:23:21 log 5668 2916 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:21 basehttp 5668 2916 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:23:29 log 5668 27164 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:29 basehttp 5668 27164 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:23:36 log 5668 13080 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:36 basehttp 5668 13080 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:23:47 log 5668 13120 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:47 basehttp 5668 13120 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:23:50 basehttp 5668 16532 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:23:53 log 5668 27792 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:53 basehttp 5668 27792 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:23:59 log 5668 28056 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:23:59 basehttp 5668 28056 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:05 log 5668 27364 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:05 basehttp 5668 27364 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:11 log 5668 9916 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:11 basehttp 5668 9916 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:17 log 5668 26236 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:17 basehttp 5668 26236 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:23 log 5668 23532 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:23 basehttp 5668 23532 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:29 log 5668 9200 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:29 basehttp 5668 9200 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:35 log 5668 10192 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:35 basehttp 5668 10192 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:41 log 5668 28236 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:41 basehttp 5668 28236 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:47 log 5668 26200 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:47 basehttp 5668 26200 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:24:47 basehttp 5668 26200 - Broken pipe from ('192.168.3.20', 4178)
+[INFO] 2024-12-23 00:24:50 basehttp 5668 16532 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:24:53 log 5668 27732 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:53 basehttp 5668 27732 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:24:59 log 5668 26648 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:24:59 basehttp 5668 26648 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:25:05 log 5668 1956 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:05 basehttp 5668 1956 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:25:05 basehttp 5668 1956 - Broken pipe from ('192.168.3.20', 4354)
+[WARNING] 2024-12-23 00:25:11 log 5668 128 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:11 basehttp 5668 128 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:25:17 log 5668 19556 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:17 basehttp 5668 19556 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:25:24 log 5668 13340 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:24 basehttp 5668 13340 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:25:31 log 5668 25780 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:31 basehttp 5668 25780 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:25:31 basehttp 5668 25780 - Broken pipe from ('192.168.3.20', 4541)
+[WARNING] 2024-12-23 00:25:41 log 5668 28484 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:41 basehttp 5668 28484 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:25:48 log 5668 25188 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:48 basehttp 5668 25188 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:25:50 basehttp 5668 16532 "GET /student/assignments/ HTTP/1.1" 200 40
+[WARNING] 2024-12-23 00:25:55 log 5668 25508 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:25:55 basehttp 5668 25508 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:26:00 log 5668 27104 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:26:00 basehttp 5668 27104 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:26:06 log 5668 26324 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:26:06 basehttp 5668 26324 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:26:12 log 5668 15736 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:26:12 basehttp 5668 15736 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:26:18 log 5668 9740 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:26:18 basehttp 5668 9740 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:26:24 log 5668 27824 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:26:24 basehttp 5668 27824 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 00:26:30 log 5668 27732 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 00:26:30 basehttp 5668 27732 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 00:26:42 basehttp 5668 16532 - Broken pipe from ('192.168.3.20', 1546)
+[INFO] 2024-12-23 10:39:31 autoreload 23856 19460 Watching for file changes with StatReloader
+[INFO] 2024-12-23 10:39:42 basehttp 23856 13096 "GET / HTTP/1.1" 200 2651
+[WARNING] 2024-12-23 10:39:48 log 23856 13096 Not Found: /favicon.ico
+[WARNING] 2024-12-23 10:39:48 basehttp 23856 13096 "GET /favicon.ico HTTP/1.1" 404 6793
+[INFO] 2024-12-23 10:39:55 views 23856 13096 Login attempt for user: teacher
+[INFO] 2024-12-23 10:39:56 views 23856 13096 Teacher login - clearing student sessions
+[INFO] 2024-12-23 10:39:57 views 23856 13096 Cleared 2 existing sessions for user teacher
+[INFO] 2024-12-23 10:39:57 views 23856 13096 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 10:39:57 basehttp 23856 13096 "POST / HTTP/1.1" 302 0
+[INFO] 2024-12-23 10:39:57 basehttp 23856 13096 "GET /teacher/ HTTP/1.1" 200 6533
+[INFO] 2024-12-23 10:39:57 basehttp 23856 13096 "GET /static/core/js/teacher.js HTTP/1.1" 304 0
+[WARNING] 2024-12-23 10:39:59 log 23856 6504 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:39:59 basehttp 23856 6504 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:05 log 23856 24076 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:05 basehttp 23856 24076 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:10 log 23856 3452 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:10 basehttp 23856 3452 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 10:40:10 basehttp 23856 3452 - Broken pipe from ('192.168.3.20', 9442)
+[WARNING] 2024-12-23 10:40:15 log 23856 10088 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:15 basehttp 23856 10088 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:20 log 23856 4556 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:20 basehttp 23856 4556 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:25 log 23856 6408 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:25 basehttp 23856 6408 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:30 log 23856 12648 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:30 basehttp 23856 12648 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 10:40:30 basehttp 23856 12648 - Broken pipe from ('192.168.3.20', 9584)
+[WARNING] 2024-12-23 10:40:35 log 23856 5988 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:35 basehttp 23856 5988 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:40 log 23856 7508 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:40 basehttp 23856 7508 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:45 log 23856 2164 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:45 basehttp 23856 2164 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:50 log 23856 23772 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:50 basehttp 23856 23772 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:40:55 log 23856 21508 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:40:55 basehttp 23856 21508 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:01 log 23856 1504 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:01 basehttp 23856 1504 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:06 log 23856 14716 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:06 basehttp 23856 14716 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:12 log 23856 608 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:12 basehttp 23856 608 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:19 log 23856 23672 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:19 basehttp 23856 23672 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:28 log 23856 4240 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:28 basehttp 23856 4240 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:35 log 23856 24076 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:35 basehttp 23856 24076 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:42 log 23856 22448 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:42 basehttp 23856 22448 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:48 log 23856 12648 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:48 basehttp 23856 12648 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:41:58 log 23856 21392 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:41:58 basehttp 23856 21392 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:03 log 23856 13272 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:03 basehttp 23856 13272 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:08 log 23856 18012 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:08 basehttp 23856 18012 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:13 log 23856 22736 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:13 basehttp 23856 22736 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 10:42:13 basehttp 23856 22736 - Broken pipe from ('192.168.3.20', 10435)
+[WARNING] 2024-12-23 10:42:18 log 23856 8188 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:18 basehttp 23856 8188 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:23 log 23856 24328 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:23 basehttp 23856 24328 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:28 log 23856 10596 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:28 basehttp 23856 10596 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:33 log 23856 24216 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:33 basehttp 23856 24216 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:38 log 23856 12640 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:38 basehttp 23856 12640 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:43 log 23856 9808 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:43 basehttp 23856 9808 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:48 log 23856 5980 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:49 basehttp 23856 5980 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 10:42:49 basehttp 23856 5980 - Broken pipe from ('192.168.3.20', 10762)
+[WARNING] 2024-12-23 10:42:54 log 23856 7900 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:54 basehttp 23856 7900 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:42:59 log 23856 15904 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:42:59 basehttp 23856 15904 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:43:04 log 23856 8700 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:43:04 basehttp 23856 8700 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:43:09 log 23856 1404 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:43:10 basehttp 23856 1404 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[INFO] 2024-12-23 10:43:10 basehttp 23856 1404 - Broken pipe from ('192.168.3.20', 10995)
+[WARNING] 2024-12-23 10:43:16 log 23856 13080 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:43:16 basehttp 23856 13080 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:43:23 log 23856 21700 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:43:23 basehttp 23856 21700 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:43:30 log 23856 15384 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:43:30 basehttp 23856 15384 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:43:37 log 23856 1928 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:43:37 basehttp 23856 1928 "GET /ws/teacher/ HTTP/1.1" 404 6793
+[WARNING] 2024-12-23 10:44:58 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:45:05 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:45:14 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:45:23 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:45:32 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:45:42 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:45:50 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:46:00 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:46:05 log 4088 8140 Not Found: /ws/teacher/
+[WARNING] 2024-12-23 10:46:10 log 4088 8140 Not Found: /ws/teacher/
+[INFO] 2024-12-23 10:53:26 views 21488 16164 Login attempt for user: 2024043
+[INFO] 2024-12-23 10:53:27 views 21488 16164 Cleared 0 existing sessions for user 2024043
+[INFO] 2024-12-23 10:53:27 views 21488 16164 Processing student login for 2024043
+[DEBUG] 2024-12-23 10:53:27 views 21488 16164 Student IP address: 192.168.3.20
+[INFO] 2024-12-23 10:53:27 views 21488 16164 Got channel layer: <class 'channels_redis.core.RedisChannelLayer'>
+[DEBUG] 2024-12-23 10:53:27 views 21488 16164 Available channel groups: {}
+[INFO] 2024-12-23 10:53:27 views 21488 16164 Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024043', 'name': '赵黛', 'ip': '192.168.3.20', 'last_login': '2024-12-23 02:53:27'}}
+[INFO] 2024-12-23 10:53:27 views 21488 16164 WebSocket message sent successfully
+[INFO] 2024-12-23 10:53:27 views 21488 16164 Login successful for 2024043, redirecting to dashboard
+[WARNING] 2024-12-23 10:53:27 log 21488 7672 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 10:55:38 log 21488 7672 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 123, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 10:55:48 views 21488 24148 Login attempt for user: teacher
+[INFO] 2024-12-23 10:55:49 views 21488 24148 Teacher login - clearing student sessions
+[INFO] 2024-12-23 10:55:50 views 21488 24148 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 10:55:50 views 21488 24148 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 10:56:16 views 21488 24164 Login attempt for user: 2024042
+[INFO] 2024-12-23 10:56:17 views 21488 24164 Cleared 0 existing sessions for user 2024042
+[INFO] 2024-12-23 10:56:17 views 21488 24164 Processing student login for 2024042
+[DEBUG] 2024-12-23 10:56:17 views 21488 24164 Student IP address: 192.168.3.20
+[INFO] 2024-12-23 10:56:17 views 21488 24164 Got channel layer: <class 'channels_redis.core.RedisChannelLayer'>
+[DEBUG] 2024-12-23 10:56:17 views 21488 24164 Available channel groups: {}
+[INFO] 2024-12-23 10:56:17 views 21488 24164 Preparing to send WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024042', 'name': '华玉晶', 'ip': '192.168.3.20', 'last_login': '2024-12-23 02:56:17'}}
+[INFO] 2024-12-23 10:56:17 views 21488 24164 WebSocket message sent successfully
+[INFO] 2024-12-23 10:56:17 views 21488 24164 Login successful for 2024042, redirecting to dashboard
+[WARNING] 2024-12-23 10:56:17 log 21488 7672 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 10:58:30 views 21692 24500 Login attempt for user: teacher
+[INFO] 2024-12-23 10:58:31 views 21692 24500 Teacher login - clearing student sessions
+[INFO] 2024-12-23 10:58:31 views 21692 24500 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 10:58:32 views 21692 24500 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 10:58:52 views 21692 18012 Login attempt for user: 2024015
+[INFO] 2024-12-23 10:58:53 views 21692 18012 Cleared 0 existing sessions for user 2024015
+[INFO] 2024-12-23 10:58:54 views 21692 18012 Processing student login for 2024015
+[DEBUG] 2024-12-23 10:58:54 views 21692 18012 Student IP address: 192.168.3.20
+[INFO] 2024-12-23 10:58:54 views 21692 18012 Student login WebSocket message sent successfully
+[WARNING] 2024-12-23 10:58:54 log 21692 24528 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 11:01:46 log 21692 24528 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 109, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 11:01:58 views 21692 9012 Login attempt for user: teacher
+[INFO] 2024-12-23 11:01:59 views 21692 9012 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:02:00 views 21692 9012 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:02:00 views 21692 9012 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:02:14 views 21692 2644 Login attempt for user: 2024017
+[INFO] 2024-12-23 11:02:15 views 21692 2644 Cleared 0 existing sessions for user 2024017
+[INFO] 2024-12-23 11:02:15 views 21692 2644 Processing student login for 2024017
+[DEBUG] 2024-12-23 11:02:15 views 21692 2644 Student IP address: 192.168.3.20
+[INFO] 2024-12-23 11:02:16 views 21692 2644 Student login WebSocket message sent successfully
+[WARNING] 2024-12-23 11:02:16 log 21692 6776 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 11:04:36 views 800 8764 Login attempt for user: teacher
+[INFO] 2024-12-23 11:04:37 views 800 8764 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:04:37 views 800 8764 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:04:37 views 800 8764 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:04:52 views 800 17204 Login attempt for user: 2024007
+[INFO] 2024-12-23 11:04:53 views 800 17204 Cleared 1 existing sessions for user 2024007
+[INFO] 2024-12-23 11:04:53 views 800 17204 Processing student login for 2024007
+[INFO] 2024-12-23 11:04:53 views 800 17204 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:04:53 views 800 17204 Preparing to send WebSocket message: {'type': 'student_login', 'student': {'username': '2024007', 'id': 8, 'name': '王露', 'student_id': '2024007', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:04:53'}}
+[INFO] 2024-12-23 11:04:53 views 800 17204 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:04:54 log 800 10596 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 11:07:38 views 23604 5088 Login attempt for user: teacher
+[INFO] 2024-12-23 11:07:39 views 23604 5088 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:07:39 views 23604 5088 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:07:40 views 23604 5088 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:07:57 views 23604 3408 Login attempt for user: 2024038
+[INFO] 2024-12-23 11:07:58 views 23604 3408 Cleared 0 existing sessions for user 2024038
+[INFO] 2024-12-23 11:07:58 views 23604 3408 Processing student login for 2024038
+[INFO] 2024-12-23 11:07:58 views 23604 3408 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:07:58 views 23604 3408 Preparing to send WebSocket message: {'type': 'student_login', 'student': {'username': '2024038', 'id': 39, 'name': '曹青槐', 'student_id': '2024038', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:07:58'}}
+[INFO] 2024-12-23 11:07:58 views 23604 3408 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:07:58 log 23604 3048 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 11:09:54 views 6480 9356 Login attempt for user: teacher
+[INFO] 2024-12-23 11:09:55 views 6480 9356 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:09:56 views 6480 9356 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:09:56 views 6480 9356 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:10:09 views 6480 2848 Login attempt for user: 2024051
+[INFO] 2024-12-23 11:10:10 views 6480 2848 Cleared 1 existing sessions for user 2024051
+[INFO] 2024-12-23 11:10:10 views 6480 2848 Processing student login for 2024051
+[INFO] 2024-12-23 11:10:10 views 6480 2848 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:10:10 views 6480 2848 Preparing to send WebSocket message: {'type': 'student_login', 'student': {'username': '2024051', 'id': 52, 'name': '秦飘', 'student_id': '2024051', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:10:10'}}
+[INFO] 2024-12-23 11:10:10 views 6480 2848 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:10:11 log 6480 23636 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 11:15:46 views 6504 10296 Login attempt for user: teacher
+[INFO] 2024-12-23 11:15:47 views 6504 10296 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:15:48 views 6504 10296 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:15:48 views 6504 10296 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:16:05 views 6504 24048 Login attempt for user: 2024011
+[INFO] 2024-12-23 11:16:06 views 6504 24048 Cleared 0 existing sessions for user 2024011
+[INFO] 2024-12-23 11:16:06 views 6504 24048 Processing student login for 2024011
+[INFO] 2024-12-23 11:16:07 views 6504 24048 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:16:07 views 6504 24048 Preparing to send WebSocket message: {'type': 'student_login', 'student': {'username': '2024011', 'id': 12, 'name': '曹冰彤', 'student_id': '2024011', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:16:07'}}
+[INFO] 2024-12-23 11:16:07 views 6504 24048 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:16:07 log 6504 23736 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 11:17:43 views 19872 21104 Login attempt for user: teacher
+[WARNING] 2024-12-23 11:17:43 views 19872 21104 Login failed for username: teacher
+[INFO] 2024-12-23 11:17:55 views 19872 14256 Login attempt for user: teacher
+[INFO] 2024-12-23 11:17:56 views 19872 14256 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:17:56 views 19872 14256 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:17:56 views 19872 14256 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:18:14 views 19872 18288 Login attempt for user: 2024013
+[INFO] 2024-12-23 11:18:15 views 19872 18288 Cleared 0 existing sessions for user 2024013
+[INFO] 2024-12-23 11:18:15 views 19872 18288 Processing student login for 2024013
+[INFO] 2024-12-23 11:18:15 views 19872 18288 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:18:15 views 19872 18288 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024013', 'id': 14, 'name': '赵胜敏', 'student_id': '2024013', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:18:15'}}
+[INFO] 2024-12-23 11:18:15 views 19872 18288 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:18:15 log 19872 18080 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 11:20:17 views 7448 6380 Login attempt for user: teacher
+[INFO] 2024-12-23 11:20:18 views 7448 6380 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:20:18 views 7448 6380 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:20:18 views 7448 6380 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:20:33 views 7448 8692 Login attempt for user: 2024011
+[INFO] 2024-12-23 11:20:34 views 7448 8692 Cleared 0 existing sessions for user 2024011
+[INFO] 2024-12-23 11:20:34 views 7448 8692 Processing student login for 2024011
+[INFO] 2024-12-23 11:20:35 views 7448 8692 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:20:35 views 7448 8692 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024011', 'id': 12, 'name': '曹冰彤', 'student_id': '2024011', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:20:35'}}
+[INFO] 2024-12-23 11:20:35 views 7448 8692 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:20:36 log 7448 22032 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 11:23:00 views 7448 8684 Login attempt for user: teacher
+[INFO] 2024-12-23 11:23:01 views 7448 8684 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:23:01 views 7448 8684 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:23:01 views 7448 8684 Login successful for teacher, redirecting to dashboard
+[INFO] 2024-12-23 11:23:14 views 7448 14196 Login attempt for user: 2024036
+[INFO] 2024-12-23 11:23:15 views 7448 14196 Cleared 1 existing sessions for user 2024036
+[INFO] 2024-12-23 11:23:15 views 7448 14196 Processing student login for 2024036
+[INFO] 2024-12-23 11:23:15 views 7448 14196 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:23:15 views 7448 14196 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024036', 'id': 37, 'name': '时艳红', 'student_id': '2024036', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:23:15'}}
+[INFO] 2024-12-23 11:23:15 views 7448 14196 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:23:16 log 7448 22032 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 11:27:13 log 5988 4976 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 11:27:22 views 5988 24004 Login attempt for user: teacher
+[INFO] 2024-12-23 11:27:23 views 5988 24004 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:27:24 views 5988 24004 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:27:24 views 5988 24004 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 11:27:24 log 5988 4976 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 11:27:28 log 5988 4976 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 11:27:36 views 5988 4032 Login attempt for user: 2024005
+[INFO] 2024-12-23 11:27:37 views 5988 4032 Cleared 1 existing sessions for user 2024005
+[INFO] 2024-12-23 11:27:37 views 5988 4032 Processing student login for 2024005
+[INFO] 2024-12-23 11:27:38 views 5988 4032 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:27:38 views 5988 4032 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024005', 'id': 6, 'name': '华枫', 'student_id': '2024005', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:27:38'}}
+[INFO] 2024-12-23 11:27:38 views 5988 4032 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:27:38 log 5988 4976 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 11:27:38 log 5988 24520 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 11:34:08 log 1748 3052 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 11:34:15 views 1748 11636 Login attempt for user: teacher
+[INFO] 2024-12-23 11:34:16 views 1748 11636 Teacher login - clearing student sessions
+[INFO] 2024-12-23 11:34:16 views 1748 11636 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 11:34:16 views 1748 11636 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 11:34:16 log 1748 3052 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 11:34:21 log 1748 3052 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 11:34:29 views 1748 236 Login attempt for user: 2024011
+[INFO] 2024-12-23 11:34:30 views 1748 236 Cleared 0 existing sessions for user 2024011
+[INFO] 2024-12-23 11:34:30 views 1748 236 Processing student login for 2024011
+[INFO] 2024-12-23 11:34:30 views 1748 236 Got channel layer for WebSocket message
+[INFO] 2024-12-23 11:34:30 views 1748 236 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024011', 'id': 12, 'name': '曹冰彤', 'student_id': '2024011', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 03:34:30'}}
+[INFO] 2024-12-23 11:34:30 views 1748 236 WebSocket message sent successfully
+[WARNING] 2024-12-23 11:34:31 log 1748 3052 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 11:34:32 log 1748 3052 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 12:47:37 log 16736 16232 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:47:44 views 16736 24920 Login attempt for user: teacher
+[INFO] 2024-12-23 12:47:45 views 16736 24920 Teacher login - clearing student sessions
+[INFO] 2024-12-23 12:47:45 views 16736 24920 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 12:47:45 views 16736 24920 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 12:47:46 log 16736 16232 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 12:47:46 log 16736 24676 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:48:04 log 16736 24676 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:48:12 views 16736 5500 Login attempt for user: 2024017
+[INFO] 2024-12-23 12:48:13 views 16736 5500 Cleared 0 existing sessions for user 2024017
+[INFO] 2024-12-23 12:48:13 views 16736 5500 Processing student login for 2024017
+[INFO] 2024-12-23 12:48:13 views 16736 5500 Got channel layer for WebSocket message
+[INFO] 2024-12-23 12:48:13 views 16736 5500 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024017', 'id': 18, 'name': '吕翠', 'student_id': '2024017', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 04:48:13'}}
+[INFO] 2024-12-23 12:48:13 views 16736 5500 WebSocket message sent successfully
+[WARNING] 2024-12-23 12:48:13 log 16736 16232 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:48:13 log 16736 24676 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 12:48:37 log 16736 24676 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:50:45 log 17268 25864 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:50:54 views 17268 19084 Login attempt for user: teacher
+[INFO] 2024-12-23 12:50:55 views 17268 19084 Teacher login - clearing student sessions
+[INFO] 2024-12-23 12:50:55 views 17268 19084 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 12:50:55 views 17268 19084 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 12:50:56 log 17268 26168 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:50:56 log 17268 25864 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 12:52:53 log 19164 10080 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:53:00 views 19164 21300 Login attempt for user: teacher
+[INFO] 2024-12-23 12:53:01 views 19164 21300 Teacher login - clearing student sessions
+[INFO] 2024-12-23 12:53:01 views 19164 21300 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 12:53:01 views 19164 21300 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 12:53:02 log 19164 10080 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:53:02 log 19164 10080 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 12:53:18 log 19164 10080 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:53:26 views 19164 7420 Login attempt for user: 2024008
+[INFO] 2024-12-23 12:53:27 views 19164 7420 Cleared 1 existing sessions for user 2024008
+[INFO] 2024-12-23 12:53:27 views 19164 7420 Processing student login for 2024008
+[INFO] 2024-12-23 12:53:27 views 19164 7420 Got channel layer for WebSocket message
+[INFO] 2024-12-23 12:53:27 views 19164 7420 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024008', 'id': 9, 'name': '钱寒', 'student_id': '2024008', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 04:53:27'}}
+[INFO] 2024-12-23 12:53:27 views 19164 7420 WebSocket message sent successfully
+[WARNING] 2024-12-23 12:53:28 log 19164 9708 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:53:28 log 19164 10080 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 12:53:36 log 19164 10080 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:55:46 log 26164 24988 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:55:53 views 26164 12888 Login attempt for user: teacher
+[INFO] 2024-12-23 12:55:54 views 26164 12888 Teacher login - clearing student sessions
+[INFO] 2024-12-23 12:55:54 views 26164 12888 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 12:55:54 views 26164 12888 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 12:55:55 log 26164 24988 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:55:55 log 26164 19176 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 12:56:12 log 26164 24988 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:56:22 views 26164 26204 Login attempt for user: 2024009
+[INFO] 2024-12-23 12:56:23 views 26164 26204 Cleared 0 existing sessions for user 2024009
+[INFO] 2024-12-23 12:56:23 views 26164 26204 Processing student login for 2024009
+[INFO] 2024-12-23 12:56:24 views 26164 26204 Got channel layer for WebSocket message
+[INFO] 2024-12-23 12:56:24 views 26164 26204 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024009', 'id': 10, 'name': '冯惜雪', 'student_id': '2024009', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 04:56:24'}}
+[INFO] 2024-12-23 12:56:24 views 26164 26204 WebSocket message sent successfully
+[WARNING] 2024-12-23 12:56:24 log 26164 24988 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:56:24 log 26164 19176 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 12:58:41 log 12648 24544 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 12:58:50 views 12648 11240 Login attempt for user: teacher
+[INFO] 2024-12-23 12:58:51 views 12648 11240 Teacher login - clearing student sessions
+[INFO] 2024-12-23 12:58:51 views 12648 11240 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 12:58:52 views 12648 11240 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 12:58:52 log 12648 24544 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 12:58:52 log 12648 22712 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 13:00:25 log 1640 25688 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 13:00:32 views 1640 24112 Login attempt for user: teacher
+[INFO] 2024-12-23 13:00:33 views 1640 24112 Teacher login - clearing student sessions
+[INFO] 2024-12-23 13:00:33 views 1640 24112 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 13:00:33 views 1640 24112 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 13:00:33 log 1640 25688 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 13:00:33 log 1640 24320 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 13:02:18 log 26324 24748 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 13:02:26 views 26324 10080 Login attempt for user: teacher
+[INFO] 2024-12-23 13:02:27 views 26324 10080 Teacher login - clearing student sessions
+[INFO] 2024-12-23 13:02:27 views 26324 10080 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 13:02:27 views 26324 10080 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 13:02:28 log 26324 6524 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 13:02:28 log 26324 24748 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 13:02:39 log 26324 24748 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 13:02:46 views 26324 24456 Login attempt for user: 2024042
+[INFO] 2024-12-23 13:02:48 views 26324 24456 Cleared 0 existing sessions for user 2024042
+[INFO] 2024-12-23 13:02:48 views 26324 24456 Processing student login for 2024042
+[INFO] 2024-12-23 13:02:48 views 26324 24456 Got channel layer for WebSocket message
+[INFO] 2024-12-23 13:02:48 views 26324 24456 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024042', 'id': 43, 'name': '华玉晶', 'student_id': '2024042', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 05:02:48'}}
+[INFO] 2024-12-23 13:02:48 views 26324 24456 WebSocket message sent successfully
+[WARNING] 2024-12-23 13:02:48 log 26324 6524 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 13:02:48 log 26324 24748 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 14:53:03 log 2980 20860 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 14:53:09 log 2980 20860 Not Found: /favicon.ico
+[INFO] 2024-12-23 14:53:11 views 2980 7212 Login attempt for user: teacher
+[INFO] 2024-12-23 14:53:12 views 2980 7212 Teacher login - clearing student sessions
+[INFO] 2024-12-23 14:53:12 views 2980 7212 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 14:53:13 views 2980 7212 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 14:53:13 log 2980 20860 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 14:53:13 log 2980 10408 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 14:53:31 log 2980 10408 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 14:53:40 views 2980 24312 Login attempt for user: 2024011
+[INFO] 2024-12-23 14:53:41 views 2980 24312 Cleared 0 existing sessions for user 2024011
+[INFO] 2024-12-23 14:53:41 views 2980 24312 Processing student login for 2024011
+[INFO] 2024-12-23 14:53:41 views 2980 24312 Got channel layer for WebSocket message
+[INFO] 2024-12-23 14:53:41 views 2980 24312 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024011', 'id': 12, 'name': '曹冰彤', 'student_id': '2024011', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 06:53:41'}}
+[INFO] 2024-12-23 14:53:41 views 2980 24312 WebSocket message sent successfully
+[WARNING] 2024-12-23 14:53:42 log 2980 20860 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 14:53:42 log 2980 10408 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 15:04:29 log 7724 24452 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:04:36 views 7724 6664 Login attempt for user: teacher
+[INFO] 2024-12-23 15:04:37 views 7724 6664 Teacher login - clearing student sessions
+[INFO] 2024-12-23 15:04:37 views 7724 6664 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 15:04:38 views 7724 6664 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:04:38 log 7724 20420 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:04:38 log 7724 24452 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:04:47 log 7724 24452 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:04:57 views 7724 24112 Login attempt for user: 2024001
+[INFO] 2024-12-23 15:04:58 views 7724 24112 Cleared 1 existing sessions for user 2024001
+[INFO] 2024-12-23 15:04:58 views 7724 24112 Processing student login for 2024001
+[INFO] 2024-12-23 15:04:58 views 7724 24112 Got channel layer for WebSocket message
+[INFO] 2024-12-23 15:04:58 views 7724 24112 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024001', 'id': 2, 'name': '李同学', 'student_id': '2024001', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 07:04:58'}}
+[INFO] 2024-12-23 15:04:58 views 7724 24112 WebSocket message sent successfully
+[WARNING] 2024-12-23 15:04:58 log 7724 20420 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 15:04:58 log 7724 24452 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:15:28 log 7724 20420 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 109, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[WARNING] 2024-12-23 15:15:31 log 7724 24452 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:15:41 views 7724 24172 Login attempt for user: teacher
+[INFO] 2024-12-23 15:15:42 views 7724 24172 Teacher login - clearing student sessions
+[INFO] 2024-12-23 15:15:43 views 7724 24172 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 15:15:43 views 7724 24172 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:15:43 log 7724 20420 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:15:43 log 7724 24452 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:15:53 log 7724 24452 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:15:58 views 7724 17664 Login attempt for user: 2024001
+[INFO] 2024-12-23 15:16:00 views 7724 17664 Cleared 1 existing sessions for user 2024001
+[INFO] 2024-12-23 15:16:00 views 7724 17664 Processing student login for 2024001
+[INFO] 2024-12-23 15:16:00 views 7724 17664 Got channel layer for WebSocket message
+[INFO] 2024-12-23 15:16:00 views 7724 17664 Sending WebSocket message: {'type': 'student_login', 'student': {'username': '2024001', 'id': 2, 'name': '李同学', 'student_id': '2024001', 'class_name': '计算机1班', 'ip': '192.168.3.20', 'login_time': '2024-12-23 07:16:00'}}
+[INFO] 2024-12-23 15:16:00 views 7724 17664 WebSocket message sent successfully
+[WARNING] 2024-12-23 15:16:00 log 7724 20420 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 15:16:00 log 7724 24452 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:17:17 log 10304 12144 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 107, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[WARNING] 2024-12-23 15:17:21 log 10304 12144 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:17:33 views 10304 10016 Login attempt for user: teacher
+[INFO] 2024-12-23 15:17:34 views 10304 10016 Teacher login - clearing student sessions
+[INFO] 2024-12-23 15:17:34 views 10304 10016 Cleared 1 existing sessions for user teacher
+[INFO] 2024-12-23 15:17:35 views 10304 10016 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:17:35 log 10304 12144 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:17:35 log 10304 12144 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:17:43 log 10304 23708 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:17:54 views 10304 7068 Login attempt for user: 2024002
+[INFO] 2024-12-23 15:17:55 views 10304 7068 Cleared 1 existing sessions for user 2024002
+[INFO] 2024-12-23 15:17:55 views 10304 7068 Processing student login for 2024002
+[INFO] 2024-12-23 15:17:55 views 10304 7068 Got channel layer for WebSocket message
+[INFO] 2024-12-23 15:17:55 views 10304 7068 Sending WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024002', 'name': '李四', 'ip': '192.168.3.20', 'last_login': '2024-12-23 07:17:55'}}
+[INFO] 2024-12-23 15:17:55 views 10304 7068 WebSocket message sent successfully
+[WARNING] 2024-12-23 15:17:55 log 10304 12144 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:17:55 log 10304 23708 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 15:33:23 autoreload 9116 14164 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 15:33:59 log 23544 7532 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:34:10 views 23544 8700 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:34:10 log 23544 7532 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:34:10 log 23544 1224 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:34:17 log 23544 1224 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:34:27 views 23544 15972 Sending WebSocket message: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024001', 'name': '李同学', 'ip': '192.168.3.20', 'last_login': '2024-12-23 07:34:27'}}
+[INFO] 2024-12-23 15:34:27 views 23544 15972 WebSocket message sent successfully
+[INFO] 2024-12-23 15:34:27 views 23544 15972 Login successful for 2024001, redirecting to dashboard
+[WARNING] 2024-12-23 15:34:27 log 23544 1224 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:34:27 log 23544 7532 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 15:35:45 autoreload 9116 14164 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 15:35:46 autoreload 23212 13584 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 15:37:27 log 7428 18520 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:37:36 views 7428 11360 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:37:36 log 7428 18520 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:37:36 log 7428 14276 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:37:53 log 7428 14276 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:38:03 views 7428 9940 Login failed for username: :2024009
+[WARNING] 2024-12-23 15:38:03 log 7428 14276 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:38:15 views 7428 1832 准备发送 WebSocket 消息: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024009', 'name': '冯惜雪', 'ip': '192.168.3.20', 'last_login': '2024-12-23 07:38:15'}}
+[INFO] 2024-12-23 15:38:15 views 7428 1832 WebSocket 消息发送成功
+[INFO] 2024-12-23 15:38:15 views 7428 1832 Login successful for 2024009, redirecting to dashboard
+[WARNING] 2024-12-23 15:38:15 log 7428 18520 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:38:15 log 7428 14276 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 15:38:41 log 7428 14276 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:39:09 autoreload 23212 13584 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 15:39:10 autoreload 22312 21228 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 15:43:57 log 7428 14276 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:44:04 views 7428 18812 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:44:04 log 7428 18520 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:44:04 log 7428 14276 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:44:11 log 7428 14276 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:44:19 views 7428 2844 准备发送 WebSocket 消息: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024008', 'name': '钱寒', 'ip': '192.168.3.20', 'last_login': '2024-12-23 07:44:19'}}
+[INFO] 2024-12-23 15:44:19 views 7428 2844 WebSocket 消息发送成功
+[INFO] 2024-12-23 15:44:19 views 7428 2844 Login successful for 2024008, redirecting to dashboard
+[WARNING] 2024-12-23 15:44:20 log 7428 18520 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:44:20 log 7428 14276 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 15:46:24 autoreload 22312 21228 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 15:46:25 autoreload 1776 22136 Watching for file changes with StatReloader
+[INFO] 2024-12-23 15:46:38 autoreload 17152 17804 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 15:47:34 log 604 10028 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:47:44 views 604 4048 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:47:44 log 604 10028 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:47:44 log 604 7592 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:48:43 log 604 7592 Not Found: /s
+[WARNING] 2024-12-23 15:48:48 log 604 7592 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:49:04 views 604 13804 准备发送 WebSocket 消息: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '柏清怡', 'ip': '192.168.3.20', 'last_login': '2024-12-23 07:49:04'}}
+[INFO] 2024-12-23 15:49:04 views 604 13804 WebSocket 消息发送成功
+[WARNING] 2024-12-23 15:49:04 log 604 10028 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:49:04 log 604 7592 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 15:49:23 log 604 7592 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:56:29 autoreload 17152 17804 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 15:56:30 autoreload 11896 7892 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 15:58:22 log 23868 8516 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:58:30 views 23868 7552 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 15:58:31 log 23868 24140 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:58:31 log 23868 8516 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 15:58:55 log 23868 8516 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 15:59:04 views 23868 4036 准备发送学生登录消息: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-23 07:59:04'}}
+[INFO] 2024-12-23 15:59:04 views 23868 4036 学生登录消息发送成功
+[WARNING] 2024-12-23 15:59:04 log 23868 24140 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 15:59:04 log 23868 8516 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 15:59:32 log 23868 8516 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:06:35 autoreload 10832 16716 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 16:06:53 log 23052 9212 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:07:02 views 23052 21632 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 16:07:02 log 23052 9212 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 16:07:03 log 23052 9212 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 16:07:11 log 23052 9212 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:07:21 views 23052 6184 准备发送学生登录消息: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024045', 'name': '孟春文', 'ip': '192.168.3.20', 'last_login': '2024-12-23 08:07:21'}}
+[INFO] 2024-12-23 16:07:21 views 23052 6184 学生登录消息发送成功
+[WARNING] 2024-12-23 16:07:22 log 23052 9212 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 16:07:22 log 23052 5388 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 16:07:28 log 23052 9212 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:16:07 autoreload 23828 23220 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 16:18:48 log 13960 15696 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:18:55 views 13960 21612 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 16:18:55 log 13960 15696 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 16:18:55 log 13960 19716 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 16:19:03 log 13960 19716 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:19:11 views 13960 7532 准备发送学生登录消息: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-23 08:19:10'}}
+[INFO] 2024-12-23 16:19:11 views 13960 7532 学生登录消息发送成功
+[WARNING] 2024-12-23 16:19:11 log 13960 15696 Not Found: /static/core/js/student.js
+[WARNING] 2024-12-23 16:19:11 log 13960 19716 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 16:19:16 log 13960 19716 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:20:50 autoreload 23828 23220 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 16:20:51 autoreload 16688 21812 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 16:30:34 log 13960 15696 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 104, in teacher_dashboard
+django.core.exceptions.PermissionDenied
+[WARNING] 2024-12-23 16:30:41 log 13960 19716 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:30:51 views 13960 13624 Login successful for teacher, redirecting to dashboard
+[WARNING] 2024-12-23 16:30:51 log 13960 15696 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 16:30:51 log 13960 19716 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 16:31:06 log 13960 19716 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 16:31:27 views 13960 23980 Login failed for username: 2024056
+[WARNING] 2024-12-23 16:31:27 log 13960 19716 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 16:31:40 views 13960 11700 准备发送学生登录消息: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024050', 'name': '吕琴', 'ip': '192.168.3.20', 'last_login': '2024-12-23 08:31:40'}}
+[INFO] 2024-12-23 16:31:40 views 13960 11700 学生登录消息发送成功
+[WARNING] 2024-12-23 16:31:40 log 13960 8092 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 16:31:40 log 13960 19716 Not Found: /static/core/js/student.js
+[INFO] 2024-12-23 16:34:45 autoreload 16688 21812 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 16:34:46 autoreload 6060 17280 Watching for file changes with StatReloader
+[INFO] 2024-12-23 18:48:09 autoreload 22396 3064 Watching for file changes with StatReloader
+[WARNING] 2024-12-23 18:48:22 log 17660 12832 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 18:48:31 views 17660 6608 Login failed for username: teacher
+[WARNING] 2024-12-23 18:48:31 log 17660 12832 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 18:48:52 log 17660 12832 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 18:48:52 log 17660 11768 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 18:50:21 log 24928 25208 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 18:50:29 views 24928 1000 Login failed for username: teacher
+[WARNING] 2024-12-23 18:50:29 log 24928 25208 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 18:50:37 log 24928 25208 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 18:50:37 log 24928 9060 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 18:51:06 log 24928 9060 Not Found: /static/core/css/style.css
+[WARNING] 2024-12-23 18:51:12 log 24928 25208 Not Found: /static/core/js/teacher.js
+[WARNING] 2024-12-23 18:51:12 log 24928 9060 Not Found: /static/core/css/style.css
+[INFO] 2024-12-23 18:58:42 autoreload 22396 3064 D:\site\批改作业13\homework_system\urls.py changed, reloading.
+[INFO] 2024-12-23 18:58:43 autoreload 25876 2876 Watching for file changes with StatReloader
+[INFO] 2024-12-23 18:59:27 consumers 23704 7128 教师尝试连接 WebSocket
+[INFO] 2024-12-23 19:00:04 consumers 23704 7128 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024010', 'name': '韩宜', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:00:04'}}
+[INFO] 2024-12-23 19:00:37 consumers 23704 7128 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024037', 'name': '魏成倩', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:00:37'}}
+[INFO] 2024-12-23 19:04:28 consumers 23704 7128 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 19:04:40 consumers 23704 7128 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:04:42 log 23704 22476 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 19:04:51 log 23704 22476 Forbidden: /student/assignments/
+[INFO] 2024-12-23 19:04:59 consumers 23704 7128 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '柏清怡', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:04:59'}}
+[INFO] 2024-12-23 19:05:18 consumers 23704 7128 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024037', 'name': '魏成倩', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:05:18'}}
+[WARNING] 2024-12-23 19:12:00 log 23704 22476 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 19:12:00 consumers 23704 7128 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 19:12:16 consumers 23704 7128 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:12:18 log 23704 22476 Forbidden: /student/assignments/
+[INFO] 2024-12-23 19:12:42 consumers 23704 7128 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024035', 'name': '郑晶', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:12:42'}}
+[INFO] 2024-12-23 19:16:28 consumers 23704 7128 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 19:16:41 consumers 23704 7128 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:16:48 log 23704 22476 Forbidden: /student/assignments/
+[INFO] 2024-12-23 19:17:10 consumers 23704 7128 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024034', 'name': '褚光兰', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:17:10'}}
+[INFO] 2024-12-23 19:19:23 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:19:23 consumers 352 20124 非教师用户 2024034 (学生) 尝试连接
+[INFO] 2024-12-23 19:19:23 consumers 352 20124 Teacher 2024034 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 19:19:29 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:19:29 consumers 352 20124 非教师用户 2024034 (学生) 尝试连接
+[INFO] 2024-12-23 19:19:29 consumers 352 20124 Teacher 2024034 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 19:19:34 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:19:34 consumers 352 20124 非教师用户 2024034 (学生) 尝试连接
+[INFO] 2024-12-23 19:19:34 consumers 352 20124 Teacher 2024034 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 19:19:50 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:19:51 log 352 25732 Forbidden: /student/assignments/
+[INFO] 2024-12-23 19:20:08 consumers 352 20124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024013', 'name': '赵胜敏', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:20:08'}}
+[WARNING] 2024-12-23 19:35:32 log 352 25732 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 19:35:32 consumers 352 20124 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 19:35:46 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 19:35:47 log 352 25732 Forbidden: /student/assignments/
+[INFO] 2024-12-23 19:36:02 consumers 352 20124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024012', 'name': '孔琳', 'ip': '192.168.3.20', 'last_login': '2024-12-23 11:36:02'}}
+[INFO] 2024-12-23 20:09:46 consumers 352 20124 Teacher teacher (教师) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 21:08:05 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:08:05 consumers 352 20124 非教师用户 2024012 (学生) 尝试连接
+[INFO] 2024-12-23 21:08:05 consumers 352 20124 Teacher 2024012 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 21:08:11 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:08:11 consumers 352 20124 非教师用户 2024012 (学生) 尝试连接
+[INFO] 2024-12-23 21:08:11 consumers 352 20124 Teacher 2024012 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 21:08:16 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:08:16 consumers 352 20124 非教师用户 2024012 (学生) 尝试连接
+[INFO] 2024-12-23 21:08:16 consumers 352 20124 Teacher 2024012 (学生) WebSocket disconnected with code: 1006
+[WARNING] 2024-12-23 21:08:19 log 352 25732 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 21:08:40 consumers 352 20124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:08:41 log 352 25732 Forbidden: /student/assignments/
+[INFO] 2024-12-23 21:08:58 consumers 352 20124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '柏清怡', 'ip': '192.168.3.20', 'last_login': '2024-12-23 13:08:58'}}
+[INFO] 2024-12-23 21:19:58 consumers 300 24792 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:19:58 consumers 300 24792 非教师用户 2024015 (学生) 尝试连接
+[INFO] 2024-12-23 21:19:58 consumers 300 24792 Teacher 2024015 (学生) WebSocket disconnected with code: 1006
+[WARNING] 2024-12-23 21:20:01 log 300 7664 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 21:20:18 consumers 300 24792 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:20:20 log 300 7664 Forbidden: /student/assignments/
+[INFO] 2024-12-23 21:20:34 consumers 300 24792 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '柏清怡', 'ip': '192.168.3.20', 'last_login': '2024-12-23 13:20:34'}}
+[INFO] 2024-12-23 21:23:53 consumers 7164 26348 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:23:53 consumers 7164 26348 非教师用户 2024015 (学生) 尝试连接
+[INFO] 2024-12-23 21:23:53 consumers 7164 26348 Teacher 2024015 (学生) WebSocket disconnected with code: 1006
+[WARNING] 2024-12-23 21:24:11 log 7164 12124 Forbidden: /student/assignments/
+[INFO] 2024-12-23 21:24:12 consumers 7164 26348 教师尝试连接 WebSocket
+[INFO] 2024-12-23 21:24:24 consumers 7164 26348 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024013', 'name': '赵胜敏', 'ip': '192.168.3.20', 'last_login': '2024-12-23 13:24:24'}}
+[INFO] 2024-12-23 21:27:31 autoreload 25876 2876 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 21:27:33 autoreload 1864 25636 Watching for file changes with StatReloader
+[INFO] 2024-12-23 21:27:38 consumers 7164 26348 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 21:27:54 consumers 7164 26348 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:27:59 log 7164 12124 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:27:59 log 7164 12124 Forbidden (Permission denied): /student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 144, in student_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 21:28:19 consumers 7164 26348 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024016', 'name': '许敏', 'ip': '192.168.3.20', 'last_login': '2024-12-23 13:28:19'}}
+[INFO] 2024-12-23 21:33:02 autoreload 1864 25636 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-23 21:33:04 autoreload 16920 20944 Watching for file changes with StatReloader
+[INFO] 2024-12-23 21:38:09 autoreload 15760 6492 Watching for file changes with StatReloader
+[INFO] 2024-12-23 21:38:13 consumers 9076 14124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:38:13 consumers 9076 14124 非教师用户 2024016 (学生) 尝试连接
+[INFO] 2024-12-23 21:38:13 consumers 9076 14124 Teacher 2024016 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 21:38:18 consumers 9076 14124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:38:18 consumers 9076 14124 非教师用户 2024016 (学生) 尝试连接
+[INFO] 2024-12-23 21:38:18 consumers 9076 14124 Teacher 2024016 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 21:38:40 consumers 9076 14124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:38:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:38:53 log 9076 23792 Forbidden: /student/assignments/
+[INFO] 2024-12-23 21:39:05 consumers 9076 14124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024008', 'name': '钱寒', 'ip': '192.168.3.20', 'last_login': '2024-12-23 21:39:05'}}
+[INFO] 2024-12-23 21:39:36 consumers 9076 14124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024009', 'name': '冯惜雪', 'ip': '192.168.3.20', 'last_login': '2024-12-23 21:39:36'}}
+[INFO] 2024-12-23 21:39:49 consumers 9076 14124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024010', 'name': '韩宜', 'ip': '192.168.3.20', 'last_login': '2024-12-23 21:39:49'}}
+[WARNING] 2024-12-23 21:48:38 log 9076 23792 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 21:48:38 consumers 9076 14124 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-23 21:48:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:48:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:48:51 log 9076 23792 Forbidden: /student/assignments/
+[INFO] 2024-12-23 21:49:03 consumers 9076 14124 教师尝试连接 WebSocket
+[INFO] 2024-12-23 21:49:20 consumers 9076 14124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024001', 'name': '李同学', 'ip': '192.168.3.20', 'last_login': '2024-12-23 21:49:20'}}
+[INFO] 2024-12-23 21:53:49 consumers 9076 14124 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 21:54:08 consumers 9076 14124 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 21:54:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:55:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:56:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:57:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:58:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 21:59:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 22:00:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 22:01:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 22:02:51 log 9076 23792 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 22:03:51 log 9076 23792 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:04:50 consumers 9076 14124 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024001', 'name': '李同学', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:04:50'}}
+[INFO] 2024-12-23 22:05:33 autoreload 16352 11920 Watching for file changes with StatReloader
+[INFO] 2024-12-23 22:05:44 consumers 23692 4544 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 22:05:44 consumers 23692 4544 非教师用户 2024001 (学生) 尝试连接
+[INFO] 2024-12-23 22:05:44 consumers 23692 4544 Teacher 2024001 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 22:05:49 consumers 23692 4544 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 22:05:49 consumers 23692 4544 非教师用户 2024001 (学生) 尝试连接
+[INFO] 2024-12-23 22:05:49 consumers 23692 4544 Teacher 2024001 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-23 22:06:01 consumers 23692 4544 教师尝试连接 WebSocket
+[INFO] 2024-12-23 22:06:14 consumers 23692 4544 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:06:14'}}
+[INFO] 2024-12-23 22:08:37 consumers 23692 4544 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-23 22:08:47 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:08:48 consumers 23692 4544 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 22:08:49 log 23692 9212 Forbidden (Permission denied): /student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 144, in student_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[WARNING] 2024-12-23 22:08:51 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:09:06 consumers 23692 4544 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024006', 'name': '郑倩', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:09:06'}}
+[WARNING] 2024-12-23 22:11:07 log 23692 9212 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 22:11:08 consumers 23692 4544 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-23 22:11:44 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:11:46 consumers 23692 4544 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 22:11:51 log 23692 9212 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 22:11:52 log 23692 24468 Forbidden (CSRF token from POST incorrect.): /
+[WARNING] 2024-12-23 22:12:02 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:12:07 consumers 23692 4544 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:12:07'}}
+[INFO] 2024-12-23 22:13:15 autoreload 16352 11920 D:\site\批改作业13\homework_system\settings.py changed, reloading.
+[INFO] 2024-12-23 22:13:15 autoreload 17124 2656 Watching for file changes with StatReloader
+[INFO] 2024-12-23 22:13:31 consumers 23692 4544 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-23 22:13:45 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:13:46 consumers 23692 4544 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 22:13:51 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:14:03 consumers 23692 4544 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024010', 'name': '韩宜', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:14:03'}}
+[INFO] 2024-12-23 22:16:27 consumers 23692 4544 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024019', 'name': '沈莉', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:16:27'}}
+[INFO] 2024-12-23 22:18:14 consumers 23692 4544 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-23 22:18:25 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:18:35 consumers 23692 4544 教师尝试连接 WebSocket
+[INFO] 2024-12-23 22:18:45 consumers 23692 4544 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024036', 'name': '时艳红', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:18:45'}}
+[INFO] 2024-12-23 22:22:21 consumers 23692 4544 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 22:22:42 consumers 23692 4544 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 22:22:45 log 23692 9212 Forbidden: /student/assignments/
+[WARNING] 2024-12-23 22:22:51 log 23692 9212 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:23:03 consumers 23692 4544 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024035', 'name': '郑晶', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:23:03'}}
+[INFO] 2024-12-23 22:25:08 consumers 22468 21672 教师尝试连接 WebSocket
+[WARNING] 2024-12-23 22:25:08 consumers 22468 21672 非教师用户 2024035 (学生) 尝试连接
+[INFO] 2024-12-23 22:25:08 consumers 22468 21672 Teacher 2024035 (学生) WebSocket disconnected with code: 1006
+[WARNING] 2024-12-23 22:25:22 log 22468 20880 Forbidden: /student/assignments/
+[INFO] 2024-12-23 22:25:32 consumers 22468 21672 教师尝试连接 WebSocket
+[INFO] 2024-12-23 22:25:33 consumers 22468 21672 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024009', 'name': '冯惜雪', 'ip': '192.168.3.20', 'last_login': '2024-12-23 22:25:33'}}
+[WARNING] 2024-12-23 23:24:37 log 22468 20880 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 23:24:37 consumers 22468 21672 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 23:24:54 consumers 22468 21672 教师尝试连接 WebSocket
+[INFO] 2024-12-23 23:25:08 consumers 22468 21672 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '柏清怡', 'ip': '192.168.3.20', 'last_login': '2024-12-23 23:25:08'}}
+[WARNING] 2024-12-23 23:27:50 log 22468 20880 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-23 23:27:50 consumers 22468 21672 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-23 23:28:08 consumers 22468 21672 教师尝试连接 WebSocket
+[INFO] 2024-12-23 23:28:22 consumers 22468 21672 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024047', 'name': '朱明珠', 'ip': '192.168.3.20', 'last_login': '2024-12-23 23:28:22'}}
+[WARNING] 2024-12-23 23:28:54 views 22468 16584 Login failed for username: 2024065
+[INFO] 2024-12-23 23:29:05 consumers 22468 21672 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024014', 'name': '周琴', 'ip': '192.168.3.20', 'last_login': '2024-12-23 23:29:05'}}
+[INFO] 2024-12-24 08:25:14 autoreload 18780 13400 Watching for file changes with StatReloader
+[WARNING] 2024-12-24 08:26:20 log 21876 23544 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[WARNING] 2024-12-24 08:26:26 log 21876 23544 Not Found: /favicon.ico
+[INFO] 2024-12-24 08:28:12 consumers 21876 7076 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:28:13 log 21876 23544 Forbidden (Permission denied): /student/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 144, in student_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-24 08:28:25 consumers 21876 7076 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024015', 'name': '柏清怡', 'ip': '192.168.3.20', 'last_login': '2024-12-24 08:28:25'}}
+[INFO] 2024-12-24 08:30:39 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:30:39 consumers 6768 1116 非教师用户 2024015 (学生) 尝试连接
+[INFO] 2024-12-24 08:30:39 consumers 6768 1116 Teacher 2024015 (学生) WebSocket disconnected with code: 1006
+[INFO] 2024-12-24 08:30:44 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:30:44 consumers 6768 1116 非教师用户 2024015 (学生) 尝试连接
+[INFO] 2024-12-24 08:30:44 consumers 6768 1116 Teacher 2024015 (学生) WebSocket disconnected with code: 1006
+[WARNING] 2024-12-24 08:30:47 log 6768 1612 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-24 08:31:00 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:31:01 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 08:31:19 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024016', 'name': '许敏', 'ip': '192.168.3.20', 'last_login': '2024-12-24 08:31:19'}}
+[WARNING] 2024-12-24 08:33:03 log 6768 1612 Not Found: /、
+[INFO] 2024-12-24 08:33:03 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 08:33:18 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:33:21 log 6768 1612 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 08:33:21 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 08:33:34 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024023', 'name': '褚成倩', 'ip': '192.168.3.20', 'last_login': '2024-12-24 08:33:34'}}
+[WARNING] 2024-12-24 08:41:06 log 6768 1612 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-24 08:41:06 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-24 08:41:17 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 08:41:21 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:41:27 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 08:41:31 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024020', 'name': '严悦明', 'ip': '192.168.3.20', 'last_login': '2024-12-24 08:41:31'}}
+[INFO] 2024-12-24 08:52:54 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 08:53:05 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:53:05 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 08:53:18 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024032', 'name': '王月', 'ip': '192.168.3.20', 'last_login': '2024-12-24 08:53:18'}}
+[WARNING] 2024-12-24 08:57:54 log 6768 1612 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-24 08:57:54 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-24 08:58:08 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 08:58:10 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 08:58:21 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 08:58:21 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024042', 'name': '华玉晶', 'ip': '192.168.3.20', 'last_login': '2024-12-24 08:58:21'}}
+[INFO] 2024-12-24 09:01:33 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 09:01:44 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 09:01:45 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 09:01:59 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 09:02:05 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 09:02:06 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 09:02:19 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024037', 'name': '魏成倩', 'ip': '192.168.3.20', 'last_login': '2024-12-24 09:02:19'}}
+[INFO] 2024-12-24 09:09:51 autoreload 18780 13400 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-24 09:09:53 autoreload 14552 13132 Watching for file changes with StatReloader
+[INFO] 2024-12-24 09:19:28 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 09:19:42 consumers 6768 1116 教师尝试连接 WebSocket
+[INFO] 2024-12-24 09:19:54 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024043', 'name': '赵黛', 'ip': '192.168.3.20', 'last_login': '2024-12-24 09:19:54'}}
+[INFO] 2024-12-24 09:28:47 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 09:28:59 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 09:29:01 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 09:29:17 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-24 09:29:17'}}
+[INFO] 2024-12-24 09:31:27 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 09:31:38 consumers 6768 1116 教师尝试连接 WebSocket
+[INFO] 2024-12-24 09:31:51 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024037', 'name': '魏成倩', 'ip': '192.168.3.20', 'last_login': '2024-12-24 09:31:51'}}
+[INFO] 2024-12-24 09:56:08 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-24 09:56:21 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 09:56:23 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 09:56:26 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 09:56:43 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024017', 'name': '吕翠', 'ip': '192.168.3.20', 'last_login': '2024-12-24 09:56:43'}}
+[INFO] 2024-12-24 09:59:01 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[WARNING] 2024-12-24 09:59:11 log 6768 1612 Forbidden: /student/assignments/
+[INFO] 2024-12-24 09:59:12 consumers 6768 1116 教师尝试连接 WebSocket
+[INFO] 2024-12-24 09:59:23 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024013', 'name': '赵胜敏', 'ip': '192.168.3.20', 'last_login': '2024-12-24 09:59:23'}}
+[WARNING] 2024-12-24 10:00:46 log 6768 1612 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-24 10:00:46 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 10:01:01 consumers 6768 1116 教师尝试连接 WebSocket
+[INFO] 2024-12-24 10:01:12 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024005', 'name': '华枫', 'ip': '192.168.3.20', 'last_login': '2024-12-24 10:01:12'}}
+[INFO] 2024-12-24 10:01:51 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024008', 'name': '钱寒', 'ip': '192.168.3.20', 'last_login': '2024-12-24 10:01:51'}}
+[INFO] 2024-12-24 10:02:09 consumers 6768 1116 TeacherConsumer 收到学生状态事件: {'type': 'student_status', 'data': {'action': 'login', 'student_id': '2024042', 'name': '华玉晶', 'ip': '192.168.3.20', 'last_login': '2024-12-24 10:02:09'}}
+[INFO] 2024-12-24 10:05:36 consumers 6768 1116 Teacher teacher (教师) WebSocket disconnected with code: 1001
+[INFO] 2024-12-24 10:05:48 consumers 6768 1116 教师尝试连接 WebSocket
+[WARNING] 2024-12-24 10:06:20 log 21696 23244 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:06:21 log 21696 23244 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:06:21 log 21696 23244 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:09:06 log 8076 20468 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:11:21 log 8076 20468 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:11:21 log 8076 20468 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:11:23 log 8076 20468 Forbidden: /student/assignments/
+[INFO] 2024-12-24 10:12:48 autoreload 14552 13132 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-24 10:12:50 autoreload 25540 5732 Watching for file changes with StatReloader
+[WARNING] 2024-12-24 10:14:21 log 5924 24476 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:14:21 log 5924 24476 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:14:21 log 5924 24476 Forbidden: /student/assignments/
+[INFO] 2024-12-24 10:16:13 autoreload 25540 5732 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-24 10:16:14 autoreload 25440 20420 Watching for file changes with StatReloader
+[WARNING] 2024-12-24 10:16:25 log 24488 12556 Forbidden (Permission denied): /teacher/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\site\批改作业13\core\views.py", line 117, in teacher_dashboard
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+[INFO] 2024-12-24 10:17:05 autoreload 25440 20420 D:\site\批改作业13\core\views.py changed, reloading.
+[INFO] 2024-12-24 10:17:06 autoreload 24320 7960 Watching for file changes with StatReloader
+[WARNING] 2024-12-24 10:19:51 log 17932 24076 Forbidden: /student/assignments/
+[WARNING] 2024-12-24 10:24:08 log 17932 24076 Forbidden: /student/assignments/

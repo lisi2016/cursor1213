@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>教师控制台</title>
+    <style>
+        .machine-grid {
+            padding: 20px;
+            max-height: calc(100vh - 150px);
+            overflow-y: auto;
+        }
+
+        /* 表格样式 */
+        .student-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* 表头样式 */
+        .student-table thead {
+            background-color: #ff0000; /* 红色背景测试 */
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .student-table th {
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #495057;
+            font-size: 14px;
+        }
+
+        /* 表格内容样式 */
+        .student-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* 表格行悬停效果 */
+        .student-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* 在线状态标签 */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            background: #4CAF50;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* 搜索框样式 */
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            width: 300px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        /* WebSocket状态样式 */
+        #websocket-status {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 8px 16px;
+            font-size: 14px;
+            text-align: right;
+            border-bottom: 1px solid #c8e6c9;
+        }
+    </style>
+</head>
+<body style="background-color: #f5f7fa;">
+    <div id="websocket-status">WebSocket 状态: 未连接</div>
+    
+    <div class="machine-grid">
+        <!-- 搜索框 -->
+        <div class="search-container">
+            <input type="text" class="search-box" id="studentSearch" placeholder="搜索学生姓名或学号...">
+        </div>
+
+        <!-- 学生列表表格 -->
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>IP地址</th>
+                    <th>登录时间</th>
+                    <th>状态</th>
+                </tr>
+            </thead>
+            <tbody id="machineGrid">
+                <tr>
+                    <td colspan="5" class="text-center">当前没有学生在线</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/static/core/js/teacher.js"></script>
+</body>
+</html> 
