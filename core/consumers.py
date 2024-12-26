@@ -1,31 +1,44 @@
 from channels.generic.websocket import AsyncWebsocketConsumer
 import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 class TeacherConsumer(AsyncWebsocketConsumer):
     async def connect(self):
-        await self.channel_layer.group_add("teacher_group", self.channel_name)
-        await self.accept()
+        try:
+            await self.channel_layer.group_add("teacher_group", self.channel_name)
+            await self.accept()
+            logger.info(f"Teacher WebSocket connected: {self.channel_name}")
+        except Exception as e:
+            logger.error(f"Error in connect: {str(e)}")
 
     async def disconnect(self, close_code):
-        await self.channel_layer.group_discard("teacher_group", self.channel_name)
-
-    async def receive(self, text_data):
         try:
-            data = json.loads(text_data)
-            print(f"Received message: {data}")
-        except json.JSONDecodeError:
-            pass
+            await self.channel_layer.group_discard("teacher_group", self.channel_name)
+            logger.info(f"Teacher WebSocket disconnected: {self.channel_name}")
+        except Exception as e:
+            logger.error(f"Error in disconnect: {str(e)}")
 
     async def student_status(self, event):
         """处理学生状态更新"""
-        print(f"Sending student status: {event}")
-        message = {
-            'type': 'student_login',  # 固定为 student_login 类型
-            'student': {
-                'student_id': event['data']['student_id'],
-                'name': event['data']['name'],
-                'ip': event['data']['ip'],
-                'login_time': event['data']['last_login']
+        try:
+            logger.info(f"Received student_status event: {event}")
+            
+            # 构建消息
+            message = {
+                'type': 'student_login',
+                'student': {
+                    'student_id': event['data']['student_id'],
+                    'name': event['data']['name'],
+                    'ip': event['data']['ip'],
+                    'login_time': event['data']['last_login']
+                }
             }
-        }
-        await self.send(text_data=json.dumps(message)) 
+            
+            # 发送消息到WebSocket客户端
+            await self.send(text_data=json.dumps(message))
+            logger.info(f"Sent message to client: {message}")
+            
+        except Exception as e:
+            logger.error(f"Error in student_status: {str(e)}") 

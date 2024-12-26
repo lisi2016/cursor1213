@@ -1,0 +1,233 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link href="{% static 'core/css/teacher.css' %}" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- 左侧导航 -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>教师控制台</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#student-monitor" class="nav-item active" data-section="student-monitor">
+                <i class="fas fa-users"></i>在线学生
+            </a>
+            <a href="#assignment-manager" class="nav-item" data-section="assignment-manager">
+                <i class="fas fa-tasks"></i>作业管理
+            </a>
+            <a href="#grade-manager" class="nav-item" data-section="grade-manager">
+                <i class="fas fa-star"></i>成绩管理
+            </a>
+            <a href="#student-import" class="nav-item" data-section="student-import">
+                <i class="fas fa-user-plus"></i>导入学生
+            </a>
+        </nav>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+        <!-- 顶部状态栏 -->
+        <div class="status-bar">
+            <div class="connection-status">
+                <span id="websocket-status" class="status-badge">
+                    <i class="fas fa-plug"></i> 正在连接...
+                </span>
+            </div>
+            <div class="user-info">
+                <span>{{ request.user.first_name }}</span>
+                <a href="{% url 'logout' %}" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> 退出
+                </a>
+            </div>
+        </div>
+
+        <!-- 在线学生监控 -->
+        <section id="student-monitor" class="dashboard-section active">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> 在线学生</h2>
+                <div class="header-actions">
+                    <span class="stat-badge">
+                        在线人数：<span id="studentCount">0</span>
+                    </span>
+                </div>
+            </div>
+            <div id="studentGrid" class="student-grid">
+                <!-- 学生卡片将通过JavaScript动态添加 -->
+                <div class="empty-state">
+                    <i class="fas fa-users fa-3x"></i>
+                    <p>等待学生登录...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作业管理 -->
+        <section id="assignment-manager" class="dashboard-section">
+            <div class="section-header">
+                <h2><i class="fas fa-tasks"></i> 作业管理</h2>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="uploadBtn">
+                        <i class="fas fa-upload"></i> 上传作业
+                    </button>
+                    <button class="btn btn-danger" id="batchDeleteBtn">
+                        <i class="fas fa-trash"></i> 批量删除
+                    </button>
+                </div>
+            </div>
+            <div class="assignment-list" id="assignmentList">
+                {% for assignment in assignments %}
+                <div class="assignment-card" data-id="{{ assignment.id }}">
+                    <div class="assignment-info">
+                        <h3>{{ assignment.file_name }}</h3>
+                        <p>分配给：{{ assignment.assigned_to.first_name }}</p>
+                        <p>班级：{{ assignment.assigned_to.class_name }}</p>
+                        <p>状态：{{ assignment.get_download_status_display }}</p>
+                        <p>成绩：{{ assignment.get_grade_display }}</p>
+                    </div>
+                    <div class="assignment-actions">
+                        <button class="btn btn-sm btn-info grade-btn" data-id="{{ assignment.id }}">
+                            <i class="fas fa-star"></i> 评分
+                        </button>
+                        <button class="btn btn-sm btn-danger delete-btn" data-id="{{ assignment.id }}">
+                            <i class="fas fa-trash"></i> 删除
+                        </button>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="empty-state">
+                    <i class="fas fa-tasks fa-3x"></i>
+                    <p>暂无作业</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- 成绩管理 -->
+        <section id="grade-manager" class="dashboard-section">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> 成绩管理</h2>
+                <div class="header-actions">
+                    <select id="classFilter" class="form-select">
+                        <option value="">所有班级</option>
+                        {% for class_name in class_list %}
+                        <option value="{{ class_name }}">{{ class_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-success" id="exportBtn">
+                        <i class="fas fa-download"></i> 导出成绩
+                    </button>
+                </div>
+            </div>
+            <div class="grade-table-container">
+                <table class="grade-table" id="gradeTable">
+                    <thead>
+                        <tr>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>班级</th>
+                            <th>作业</th>
+                            <th>成绩</th>
+                            <th>提交时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 成绩数据将通过JavaScript动态添加 -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 导入学生 -->
+        <section id="student-import" class="dashboard-section">
+            <div class="section-header">
+                <h2><i class="fas fa-user-plus"></i> 导入学生</h2>
+                <div class="header-actions">
+                    <a href="{% url 'download_template' %}" class="btn btn-info">
+                        <i class="fas fa-download"></i> 下载模板
+                    </a>
+                </div>
+            </div>
+            <div class="import-form">
+                <form method="post" action="{% url 'import_students' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">选择Excel文件</label>
+                        <input type="file" class="form-control" name="student_file" accept=".xlsx,.xls">
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> 开始导入
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- 上传作业模态框 -->
+<div class="modal fade" id="uploadModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">上传作业</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm">
+                    <div class="mb-3">
+                        <label class="form-label">选择文件</label>
+                        <input type="file" class="form-control" id="assignmentFiles" multiple>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">选择学生</label>
+                        <div id="studentSelection" class="student-selection">
+                            <!-- 学生选择列表将通过JavaScript动态添加 -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="confirmUpload">确认分发</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 评分模态框 -->
+<div class="modal fade" id="gradeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">评分</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="gradeForm">
+                    <div class="mb-3">
+                        <label class="form-label">选择成绩</label>
+                        <select class="form-select" id="gradeSelect">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="confirmGrade">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'core/js/teacher.js' %}"></script>
+{% endblock %} 

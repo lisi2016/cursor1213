@@ -2200,3 +2200,30 @@ django.core.exceptions.PermissionDenied
 [INFO] 2024-12-24 10:17:06 autoreload 24320 7960 Watching for file changes with StatReloader
 [WARNING] 2024-12-24 10:19:51 log 17932 24076 Forbidden: /student/assignments/
 [WARNING] 2024-12-24 10:24:08 log 17932 24076 Forbidden: /student/assignments/
+[INFO] 2024-12-26 22:24:04 autoreload 9692 25880 Watching for file changes with StatReloader
+[WARNING] 2024-12-26 23:18:13 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:22:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:23:06 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:23:17 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:23:47 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:24:39 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:24:47 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:25:17 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:26:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:27:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:28:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:29:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:30:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:31:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:32:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:33:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:34:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:35:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:36:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:37:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:38:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:39:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:40:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:41:45 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-26 23:41:51 log 2756 22780 Forbidden: /student/assignments/
+[WARNING] 2024-12-27 00:02:29 log 2756 22780 Forbidden: /student/assignments/
